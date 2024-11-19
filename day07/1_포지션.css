@@ -34,6 +34,6 @@
 .box6{
     background-color: orange;
     position: absolute;
-    /* absolute는 가장 가까운 relateive를 가진 조상의 기준점*/
+    /* absolute는 가장 가까운 relateive를 가진 조상의 기준점 */
     top: 50px; right: 50px;
 }
