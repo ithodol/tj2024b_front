@@ -13,6 +13,21 @@ a{
 
 
 /* 헤더 시작 */
+#header1{
+    width: 1320px;
+    margin: 0 auto;
+
+}
+#header2{
+    background-color: black;
+}
+.header2-1{
+    color: #ffff;
+    width: 1320px;
+    margin: 0 auto;
+
+}
+
 /* 헤더 끝 */
 
 /* 메인 시작 */
