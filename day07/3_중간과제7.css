@@ -1,0 +1,40 @@
+/* 부모요소 */
+.back{
+    width: 700px; height: 500px;
+    background-color: skyblue;
+    margin: 0 auto;
+    /* 하위 요소의 absolute 기준점 */
+    position: relative;
+    
+}
+.box{
+    width: 100px; height: 70px;
+    background-color: yellow;
+    border-radius: 10px;
+    /* 컨텐츠(내용물) 가로/세로 가운데 정렬 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 포지션. 기준으로 삼을 부모가 relative를 가지고 있어야 함 */
+    position:absolute;
+}
+
+/* 하위 요소 위치 지정 */
+.box1{
+    left: 300px; top: 50px;
+}
+.box2{
+    left: 150px; top: 120px; 
+}
+.box3{
+    left:450px; top: 120px; 
+}
+.box4{
+    left: 150px; top: 260px;
+}
+.box5{
+    left: 450px; top: 260px;
+}
+.box6{
+    left: 300px; top: 330px;
+}
