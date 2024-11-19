@@ -1,0 +1,153 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+a{text-decoration: none; color: black;}
+li{list-style-type: none;}
+
+/* 헤더 */
+#header{
+    width: 1280px;
+    margin: 10px auto;
+    display: flex; /* 하위 요소들의 배치 방법 */
+    flex-direction: row; /* 배치 방향 기본값(생략가능)*/
+    justify-content: space-between; /* 가로 양 끝에 균등 정렬 */
+    align-items: center; /* 세로 가운데 정렬 */
+
+}
+#topmenu{
+    display: flex;
+    justify-content: flex-end;
+}
+#mainmenu{
+    display: flex;
+    justify-content: flex-end;
+}
+/* 여러개 선택자 선택하기  : 선택자1, 선택자2 */
+/* 하위 선택자 선택하기 : 상위선택자 > 하위선택자 */
+#mainmenu > li{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 100px;
+    margin-top: 15px;
+}
+#mainimg{
+    text-align: center; /* 하위 요소들의 컨텐츠(내용물)들을 가로 가운데 정렬 */
+    margin: 30px;
+}
+
+/* 본문 */
+#main{
+    width: 1280px; margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 사이드바 */
+#sidebar{
+    width: 250px;
+}
+#sidebar > h3{
+    background-color: #0ca9a2;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+}
+#sidebar > p{
+    line-height: 160%; /* 줄 간격 (기본값 : 150%) */
+    padding: 5px;
+}
+#sidebar > div > .searchinput{
+    width: 150px; /* 입력상자 크기 */ 
+    height: 30px;
+    border-radius: 10px;
+    padding: 1px 6px;
+}
+#sidebar > div > .searchbtn{
+    /* 버튼 사이즈를 늘리는 방법 1. width 2. padding */
+    padding: 6px 10px;
+}
+#sidebar > h4{
+    border-top: 2px solid black;
+    border-bottom: 1px solid #eeeeee;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 18px;
+}
+#sidebar > ul > li{
+    padding: 10px;
+}
+
+/* 본문 */
+#content{
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
+#content > #leftcont{
+    width: 490px;
+}
+#content h3{
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+#content > #leftcont > ul > li{
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 0px;
+}
+#content > #leftcont > ul{
+    margin-bottom: 50px;
+}
+
+/* 오른쪽 본문 */
+#content > #rightcont{
+    width: 490px;
+}
+
+/* 제품 목록 구역 */
+#productlist{
+    display: flex;
+    flex-wrap: wrap;
+    /* 만약 부모요소보다 하위 요소들의 사이즈가 더 크면 */
+    /* nowrap(기본값) : 하위요소 크기 자동 맞춤  rwap : 하위요소 크기 자동 줄 바꿈 */
+}
+
+/* 제품 구역 */
+#productlist > ul{
+    width: 240px;
+    margin-bottom: 30px;
+}
+#productlist > ul > li{
+    margin-left: 20px;
+}
+
+
+/* 푸터 구역 */
+#footer{
+    background-color: #05344e;
+    color: white;
+}
+#footer > #ftcont{
+    width: 1280px;
+    margin: 0 auto;
+    padding: 15px 0px;
+}
+#footer > #ftcont > #fttop{
+    display: flex;
+}
+#footer > #ftcont > #fttop > li{
+    margin-right: 40px;
+}
+#footer > #ftcont > #ftbottom{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0px;
+}
+#footer > #ftcont > #ftbottom > ul > li > h3{
+    margin-bottom: 10px;
+}
+#footer > #ftcont > #ftbottom > ul > li{
+    margin: 5px 0px;
+}

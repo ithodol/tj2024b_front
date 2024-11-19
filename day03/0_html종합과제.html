@@ -1,0 +1,111 @@
+<!--
+    HTML 종합과제
+        - @@업체의 설문지 만들기
+            ex)병원, 카페, 가스점검 등
+
+    필수 요구사항
+    1. 상단에 유사한 로고/이미지 또는 업체명
+    2. 설문자의 이름 입력 받기
+    3. 5개 이상의 질문 만들기
+        ex) @@의료진은 친절했나요?
+    4. 질문에 대한 응답 체크박스 만들기 (단일선택, 복수선택 구분)
+        ex) 만족도 O 5~1점
+    5. 건의사항은 긴 글로 받기
+    6. 설문 날짜, 시간
+    7. 제출 버튼
+    8. html 위주로 구축. 추가적인 마크업과 디자인은 알아서.
+    
+    제출방법
+        1. A4용지에 본인이 구현할 HTML을 스케치해서 제출
+        2. 구현된 HTML의 라이브서버로 카톡방에 링크 전송
+
+    실리카겔 콘서트 만족도 조사
+    음향 체크박스
+    세트리스트 추가됐으면 하는 것 텍스트
+    무대매너 복수선택
+    재방문의사 
+    기타의견
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>종합과제</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <form>
+        <img src="./실리카겔.jpg"/>
+        <h1>실리카겔 콘서트 만족도 조사</h1>
+        <label>
+            작성일 <input type="date"/>
+            시간 <input type="time"/>
+            작성자 <input type="text"/>
+        </label>
+        <table border="1">
+            <tr>
+                <th colspan="5" align="left">1. 음향은 만족스러웠나?</th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" name="음향"/>1점
+                    <input type="radio" name="음향"/>2점
+                    <input type="radio" name="음향"/>3점
+                    <input type="radio" name="음향"/>4점
+                    <input type="radio" name="음향"/>5점
+                </td>
+            </tr>
+            <tr>
+                <th colspan="5" align="left">2. 재방문 의사가 있는가?</th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" name="재방문"/> 매우 그렇다
+                    <input type="radio" name="재방문"/> 그렇다
+                    <input type="radio" name="재방문"/> 보통이다
+                    <input type="radio" name="재방문"/> 그렇지 않다
+                    <input type="radio" name="재방문"/> 매우 그렇지 않다
+                </td>
+            </tr>
+            <tr>
+                <th colspan="5" align="left">3. 세트리스트에 추가됐으면 하는 곡은?</th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox"/> 노래제목1
+                    <input type="checkbox"/> 노래제목2
+                    <input type="checkbox"/> 노래제목3
+                    <input type="checkbox"/> 노래제목4
+                    <input type="checkbox"/> 노래제목5
+                </td>
+            </tr>
+            <tr>
+                <th colspan="5" align="left">4. 만족스러웠던 무대매너는?</th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox"/> 매너1
+                    <input type="checkbox"/> 매너2
+                    <input type="checkbox"/> 매너3
+                    <input type="checkbox"/> 매너4
+                    <input type="checkbox"/> 매너5
+                </td>
+            </tr>
+            <tr>
+                <th colspan="5" align="left">기타의견</th>
+            </tr>
+            <tr>
+                <td>
+                    <textarea rows="5" cols="100" placeholder="내용"></textarea>
+                </td>
+            </tr>
+        </table>
+        <input type="reset" value="초기화">
+        <input type="submit" value="제출"/>
+    </form>
+</body>
+</html>

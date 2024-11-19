@@ -1,0 +1,85 @@
+/* *{
+    background-color: #97c628; 
+    margin: 0; 
+    padding: 0;
+}
+.profile{
+    width: 300px;
+    text-align: center;
+}
+.top{
+    border: solid 3px #ffff;
+    border-radius: 30px;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+}
+.mid{
+    margin: 20px;
+}
+.mid > .mimg{
+    height: 300px;
+    border-radius: 100%;
+    margin-bottom: 20px;
+}
+.mcont{
+    margin: 10px;
+    text-align: center;
+}
+.bottom > .bcont{
+    text-align: center;
+    width: 300px;
+    margin: 10px;
+    padding: 20px;
+} */
+
+
+
+
+
+/* 강사 */
+ *{
+    /* 모든 여백 제거 */
+    padding: 0px; margin: 0px;
+ }
+ a{
+    color: black;
+    text-decoration: none;
+ }
+
+ 
+ /* 1. 배경색 넣기 */
+ body{
+    background-color: #97c628;
+    text-align: center;
+ }
+ /* 2. 제목 */
+ .info > .title{
+    font-size: 20px;
+    border: solid 3px #ffff;
+    border-radius: 50px;
+    width: 300px;
+    padding: 10px;
+    font-weight: bold;
+    margin: 30px auto; /* 구역 가로 가운데 배치 */
+ }
+ .logo > img{
+    width: 200px; height: 200px; /* 정사각형 만들기 */
+    border-radius: 100px; /* 정사각형 크기의 모서리 둥글게 = 원형 */
+ }
+ /* 4. 컨텐츠 */
+ .info > .content{ margin: 20px;}
+ /* 5. 링크 */
+ .info > .linkbox > .link{
+    background-color: #a175cc;
+    width: 300px;
+    margin: 15px auto; /* 위/아래=15 왼/오=가로가운데 */
+    padding: 20px;
+    border-radius: 10px;
+ }
+ .link > a{
+    /* <a>마크업의 기본css : 파랑색, 밑줄 */
+    color: #ffff;
+    font-weight: bold;
+    text-decoration: none; /* 밑줄 사용 안 함 */
+ }

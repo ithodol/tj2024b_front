@@ -1,0 +1,111 @@
+/* ======== 작업용 ======== */
+
+
+
+/* ======== 공통 부문 ======== */
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none; /* li 마크업의 글머리 제거 */
+    box-sizing: border-box; /* 사이즈기준 = 컨텐츠+안쪽여백+테두리 */
+}
+a{text-decoration: none; color: black;} /* a 마크업의 밑줄제거, 색상 검정 */
+
+
+
+
+/* ======== 헤더 부문 ======== */
+#header{
+    width: 1280px; margin: 0 auto; /* 박스/모델 구역 가로 가운데 정렬*/
+    display: flex; /* 하위 요소들 배치 방법 속성*/
+    justify-content: space-between; /* 하위 요소들을 양쪽 끝에 균등 가로 정렬 */
+    align-items: center; /* 하위 요소들을 세로 정렬*/
+
+}
+/* 상단 메뉴 */
+#topmenu{
+    display: flex; justify-content: flex-end;
+    margin: 10px 0px; font-size: 10px;
+}
+#topmenu > li{
+    margin-left: 10px;
+}
+/* 하단 메뉴 */
+#mainmenu{
+    display: flex; justify-content: flex-end;
+    margin: 30px 0px; font-size: 20px; font-weight: bold;
+}
+#mainmenu > li{
+    margin-left: 70px;
+}
+
+
+
+
+
+
+/* ======== 대표 이미지 부문 ======== */
+#mainimg{
+    width: 100%; /* 화면 전체 차지*/
+}
+
+
+
+
+
+
+
+
+/* ======== 본문 부문 ======== */
+#main{
+    width: 1280px; margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+}
+#aside{
+    width: 250px; /* 1280(부모)에서 250(자식1) 사용 */
+}
+#aside > h3{
+    background-color: gray;
+    color: white;
+    font-size: 20px;
+    padding:10px;
+}
+#aside > ul >li{
+    padding: 10px;
+    border-bottom: 1px solid #eeeeee;
+}
+#content{
+    width: 1000px; /* 1280(부모)에서 1000(자식2) 사용, 나머지 30은 여백 */ 
+}
+#content > h3{
+    font-size: 20px;
+    border-bottom: 2px solid #eeeeee;
+    padding-bottom: 20px; 
+    margin-bottom: 20px;
+}
+#content > img{
+    /* img 마크업은 display 기본값이 inline(좌우만 여백 가능) */
+    display: block; /* img 마크업을 block 변경 후 margin 사용 */
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+/* ======== 푸터 부문 ======== */
+#footer{
+    background-color: #2c2a29;
+}
+#footermain{
+    width: 1280px; margin: 0 auto;
+    color: #ffff;
+    padding: 30px 0px;
+    display: flex;
+    justify-content: space-between
+
+}

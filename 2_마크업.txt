@@ -1,0 +1,104 @@
+[마크업]
+    - html언어를 만든 회사에서 미리 정의한 규칙 - 문법
+    - <시작마크업> 내용물 </끝마크업>
+         - 예외마크업 : <br/> , <hr/> , <img/>
+    - 속성 : 마크업이 가질 수 있는 고유한 성질/ 특성
+        <마크업 속성명="속성값">
+    - 리액트는 직접 마크업 만들기, 직접 속성 만들기 가능
+[경로]
+    1. 로컬 경로=현재pc 경로, C:
+    2. 서버 경로
+        --> 절대경로
+            모든 경로를 명시하는 방법
+        --> 상대경로
+            현재 경로에서의 기준으로 상대적인 경로를 명시하는 방법
+            ../ : 현재 경로에서 한 번 밖으로 이동
+            ./ : 현재 경로 
+            / : 최상위 경로 
+
+
+[마크업 종류]
+    1. 제목 마크업
+        - <h1> ~~ <h6>, 글자크기, 굵게, 구역, 의미
+    2. 문단 마크업
+        - <p> ~ </p> / Parnassus(문단), 구역, 의미
+    3. 줄바꿈 마크업
+        - <br/> , break rule
+    4. 구분선(가로선) 마크업
+        - <hr/> , horizozntal rule 
+    5. ** 목록 마크업
+        - <ul> , under list , 순서 없는 목록 (기호(글머리))
+        - <ol> , order list , 순서 있는 목록 (숫자)
+        - <li> , list item , 목록의 내용물, 항목    
+    6. * 링크 마크업
+        - <a href=""> </a> , anchor
+        - href 속성 : a 마크업 내용 클릭시 이용할 경로
+            파일 경로1 : 파일명, 확장자
+            URL 경로 : https://www.naver.com/ https 포함해야함
+            전화번호 경로 : tel:010-0000-0000, 전화 기능이 있는 디바이스만 가능
+            식별자 경로 : #id명
+        - target 속성 : 하이퍼링크를 실행하는 방법        
+            1. _blank : 새 창으로 열기
+    7. 이미지 마크업
+        - <img src="" />
+        - src속성 : 이미지 경로
+            1. 로컬/서버
+            2. 절대/상대 
+    8. 오디오/비디오 마크업
+        - <audio> </audio>
+        - <vidio> </vidio>
+            - controls : 제어버튼 활성화
+            - autoplay : 자동실행, 정책상 불가능
+            - muted : 음소거 , autoplay muted
+    9. 입력폼
+        1. <input type="">
+            1. type 속성의 종류
+                1. type="text"      : 문자입력, 기본값 
+                2. type="password"  : 가져온 문자 입력
+                3. type="file"      : 첨부파일 입력
+                4. type="radio"     : 단일선택(name속성 값이 동일)
+                5. type="checkbox"  : 복수선택
+
+                6. type="email"     : @포함 문자입력
+                7. type="color"     : 색상 입력
+                8. type="date"      : 날짜 입력
+                9. type="time"      : 시간 입력
+                10. type="datetime-local" : 날짜/시간 입력
+                11. type="month"    : 월 입력
+                12. type="week"     : 주 입력
+                13. type="range"    : 범위 스크롤
+                14. type="number"   : 숫자 입력
+                15. type="submit"   : 폼 전송, 추후에 자바(백엔드와 통신)
+                16. type="reset"    : 폼 초기화
+                17. type="button"   : 일반 버튼, 추후에 자바스크립트(이벤트)와 연동
+            2. name 속성
+                - 각 마크업들의 식별(구별) 가능한 이름을 정의하는 곳
+                - 중복 가능한 식별 이름
+            3. value 속성
+                - 입력상자에 입력된 데이터
+            4. readonly 속성 : 읽기모드 입력 불가능 모드
+            5. disabled 속성 : 비활성화모드, 클릭과 수정 불가능 모드
+            6. placeholder 속성 : 입력상자의 가이드라인 텍스트
+            7. maxlength 속성 : 입력상자의 최대 문자 수
+            8. autofocus 속성 : 지정한 입력상지의 포커스 설정
+        2. <textarea> 긴 글 텍스트 상자 (영문 기준)
+            - rows="가로문자수" 속성, cols="세로문자수" 속성
+        3. <select> 목록 상자
+            - 구성 : <select> 마크업 안에 <option> 항목 마크업을 사용한다 
+                <select>
+                    <option> 항목1 </option>
+                    <option> 항목2 </option>
+                    <option> 항목3 </option>
+                </select>
+        4. <label> 입력 상자의 연관된 텍스트, 이름표
+        5. <fieldset> 폼 안에서 여러 입력상자들을 그룹화 하기
+            - <legend> 묶음(그룹)의 제목/이름 설정
+        6. <table> 표 만드는 마크업 / 일정한 간격으로 데이터 배치
+            - <tr> </tr> : 행 추가 마크업
+            - <th> </th> : 제목 셀(칸) 추가 마크업
+            - <td> </td> : 데이터 셀(칸) 추가 마크업
+            - 속성
+                1. rowspan="행 병합수"
+                2. colspan="열 병합수
+                3. border="테이블테두리" <table border="1"> </table>
+                    - CSS 이용한 테두리 병합 : style="border-collapse: collapse;"

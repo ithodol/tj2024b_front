@@ -1,0 +1,104 @@
+/* 전체 */
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+/* 헤더 시작 */
+/* 헤더 끝 */
+
+/* 메인 시작 */
+/* 메인 끝 */
+
+
+/* 푸터 시작 */
+/* 푸터1 시작 */
+#footer1{
+    background-color: black;
+}
+#footertop{
+    width: 1320px;
+    margin: 0 auto;
+    padding: 60px 0px;
+}
+.footertop-list{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+.footertop-list > ul { 
+    width: 410px;
+}
+.footertop-list > ul > li > a{
+    color: #5e9400;
+    font-weight: bold;
+    line-height: 190%;
+    font-size: 16px;
+}
+.footertop-list > ul > li > a > h3{
+    color: #ffff;
+    font-size: 24px;
+    border-bottom: 1px solid #999999;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.footer-sns{
+    display: flex;
+    justify-content: flex-end;
+}
+.footer-sns > div > a{
+    color: #999999;
+}
+.footer-sns > div > a > img{
+    width: 40px;
+    height: 35px;
+    margin: 0px 5px;
+}
+.follow{
+    padding-top: 8px;
+    margin: 0px 20px;
+}
+/* 푸터1 끝 */
+
+
+/* 푸터2 시작 */
+#footerbottom{
+    width: 1320px;
+    margin: 30px auto;
+}
+.footerbottom-list1{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.footerbottom-list1 > img{
+    width: 120px;
+}
+.footerbottom-list1 > p{
+    font-size: 17px;
+    color: #666666;
+    font-weight: bold;
+}
+.footerbottom-list2{
+    display: flex;
+    color: #666666;
+    font-size: 16px;
+}
+.footerbottom-list2 > li{
+    margin-right:  10px;
+}
+.copyright{
+    font-size: 12px;
+    color: #666666;
+    margin-top: 5px;
+}
+/* 푸터2 끝 */
+/* 푸터 끝 */

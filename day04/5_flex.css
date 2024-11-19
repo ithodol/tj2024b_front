@@ -1,0 +1,43 @@
+/* 하나의 div박스 모델 */
+.box{
+    border: 1px solid red;
+    width: 100px;
+    
+}
+.flexbox1{
+    border: 1px solid blue;
+    width: 250px;
+    /* 현재 지정된 선택자의 하위 마크업들을 가로배치하는 방법 */
+    display: flex;
+    /* nowrap : 만약에 현재 선택자의 크기보다 하위 요소의 크기가 더 크면 하위 요소들을 자동으로 사이즈 변경(자동맞춤)
+                예) 부모:250px, 자식:100px *3 = 300px 해당하는 경우
+                    - nowrap : 자식들의 요소 크기를 자동맞춤한다 = 80px로 줄어든다
+                    - wrap : 자식들의 요소 크기를 유지하면서 자동으로 줄바꿈 한다
+    */
+    flex-wrap: nowrap; /* wrap : 묶음 */
+}
+.flexbox2{
+    border: 1px solid blue; width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.flexbox3{
+    border: 1px solid blue; width: 250px;
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+.flexbox4{
+    border: 1px solid blue; width:250px;
+    display: flex;
+    flex-direction: row;
+    /*
+        flex-direction : 하위 요소들의 배치 방향을 정의하는 방향
+            - row(기본값) : 가로 방향
+            - column : 세로 방향
+     */
+}
+.flexbox5{
+    border: 1px solid blue; width:250px;
+    display: flex;
+    flex-direction: column;
+}

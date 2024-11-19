@@ -1,0 +1,17 @@
+.product{
+    width: 420px;
+    border: solid 1px #eeeeee;
+}
+.top > .pimg{
+    width: 420px;
+}
+.product > .top{
+    border-bottom: solid 1px #eeeeee;
+}
+.product > .bottom{
+    padding: 10px 20px;
+}
+.product > .bottom > .cont2 .point{
+    color: orange;
+    font-weight: bold;
+}

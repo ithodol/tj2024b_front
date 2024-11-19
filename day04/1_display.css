@@ -1,0 +1,30 @@
+/* 구역 구분 확인용 */
+*{border: solid 1px red;}
+
+.s1{
+    display: inline; /* span 기본값 */
+
+    /* 구역 사이즈(불가능) : inline은 사이즈를 적용할 수 없다 */
+    width: 200px; height: 200px; 
+    margin: 20px 30px; /* 바깥여백 : 위/아래=20, 왼/오=30 */
+    padding: 20px 30px; /* 안쪽여백 : 위/아래=20, 왼/오=30 */
+}
+
+.s2{
+    display: block; /* div 기본값 */
+    /* 구역 사이즈(가능) */
+    width: 100px; height: 100px;
+    margin: 20px 30px;
+    padding: 20px 30px;
+}
+.s3{
+    display: inline-block; /* input 기본값 */
+    /* 구역 사이즈(가능) */
+    width: 100px; height: 100px;
+    margin: 20px 30px;
+    padding: 20px 30px;
+
+}
+.s4{
+    display: none; /* 숨기기 및 표시 안 함 */
+}

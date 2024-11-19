@@ -1,0 +1,46 @@
+
+/* 
+    CSS 주석
+*/
+
+/* 
+    CSS 기본구조
+        선택자 { 속성명 : 속성값; }
+        어디에 { 무엇을 : 어떻게; }
+*/
+
+/* 
+    웹폰트 vs 일반폰트
+*/
+@font-face {
+    font-family: 'establishRetrosansOTF';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/establishRetrosansOTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* title 이라는 클래스 이름을 가진 마크업 꾸미기 */
+.title{
+    font-family: "궁서", "굴림"; /* 글꼴:사용자pc에 설치된 글꼴만 사용 가능 */
+    font-size: 50px; /* 글꼴크기, px(픽셀) */
+    font-style: italic; /* 글꼴 기울기 */
+    font-weight: bold; /* 글꼴 진하게, h3 마크업은 기본적으로 진하게 포함되어있음 */
+}
+.content{
+    font-family: 'establishRetrosansOTF' , '맑은고딕'; /* 웹폰트(눈누vs구글) 폰트를 제공하는 서버로부터 글꼴 사용 */
+    color: gold; /* 글꼴 색상 */
+    word-spacing: 10px; /* 단어의 간격(어간) */
+    letter-spacing: 10px; /* 글자 간격(자간)  */
+    line-height: 160%; /* 줄간격 %단위 */
+}
+.writer{
+    text-align: center; /* 텍스트/컨텐츠 가로 정렬 left, right, center */
+    /* 텍스트 선 긋기 : underline(밑줄), overline(윗줄), line-through(취소선) */
+    text-decoration: underline overline line-through;
+    /* 텍스트 그림자 : x축 y축 흐림정도 색상 */
+    text-shadow: 5px 5px 2px gray;
+    /* 색상 : 1.색상명 2.RGB색상(0~255) 3.헥사코드(16진수) */
+    color: red;
+    color: #ff0000;
+    color: rgb(255, 0, 0);
+}

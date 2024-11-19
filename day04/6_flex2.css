@@ -1,0 +1,66 @@
+.box{
+    background-color: black; color: white;
+    width: 100px;
+}
+.container{
+    display: flex; border: 3px solid red;
+}
+#flexbox1{justify-content: flex-start;}
+#flexbox2{justify-content: flex-end;}
+#flexbox3{justify-content: center;}
+#flexbox4{justify-content: space-between;}
+#flexbox5{justify-content: space-around;}
+#flexbox6{justify-content: space-evenly;}
+
+/* 
+    justify-content : flex 요소의 하위 요소들을 가로 정렬 속성
+        - flex-start(기본값) : 왼쪽 정렬
+        - flex-end : 오른쪽 정렬
+        - center : 가운데 정렬
+        - space-between : 양쪽 끝에 여백없이. 사이 여백을 균등 정렬
+        - space-around : 양쪽 끝에 여백은 사이 여백의 50% 하고 사이 여백을 균등 정렬
+        - space-evenly : 전체 여백을 균등 정렬
+*/
+
+
+
+
+#flexbox7{
+    display: flex;
+    border: 1px solid blue;
+    width: 200px;
+    align-items: stretch;
+}
+.box1{width: 50px;height: 50px;}
+.box2{width: 100px;height: 100px;}
+.box3{width: 50px;height: 80px;}
+
+#flexbox8{
+    display: flex;
+    border: 1px solid blue;
+    width: 200px;
+    align-items: center;
+}
+
+#flexbox9{
+    display: flex;
+    border: 1px solid blue;
+    width: 200px;
+    align-items: end;
+}
+#flexbox10{
+    display: flex;
+    border: 1px solid blue;
+    width: 200px;
+    align-items: start;
+}
+
+/* 
+    align-items : flex 요소의 하위 요소들을 세로 정렬 속성
+        - streatch(기본값) : 자식요소들은 고정값이 없으면 자동으로 부모요소의 높이만큼 늘어난다
+        - center : 자식요소들은 부모 요소의 세로 가운데 정렬
+        - flex-end : 자식요소들은 부모 요소의 밑변/하단 정렬
+        - flex-start : 자식요소들은 부모 요소의 윗변/상단 정렬
+*/
+
+

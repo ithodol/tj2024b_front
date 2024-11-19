@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1> 이미지 마크업 </h1>
+    <img src="./스폰지밥.jpg"/> <!-- 상대경로 : 현재 html 경로(day02) 기준으로 이미지를 찾는다 -->
+    <img src="../스폰지밥.jpg" /> <!-- 상대경로 : 현재 html 경로(day02) 기준으로 ../(상위이동) 이동 후 파일을 찾는다 -->
+
+    <img src="http://127.0.0.1:5500/day02/스폰지밥.jpg" /> <!-- 절대경로 -->
+    <img src="http://127.0.0.1:5500/스폰지밥.jpg" /> <!-- 절대경로 -->
+
+    <h1> 오디오 마크업 </h1>
+    <audio src="오디오.mp3" controls autoplay> </audio> <!-- 브라우저 정책상 자동실행 금지 -->
+
+
+    <h1> 비디오 마크업 </h1>
+    <video src="비디오.mp4" controls autoplay muted> </video>
+
+    <h1> 외부 멀티미디어(퍼가기) 마크업 </h1>
+    <h2> 유튜브 영상 </h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/DIPxnt5vnhU?si=PTOVzi8k7RlFZAyn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <h2> 구글 지도 </h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10688.251607340137!2d128.8130857259638!3d37.20886919936662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3561700a92c700bf%3A0x374527f477814cf3!2z6rCV7JuQ656c65OcIOy5tOyngOuFuA!5e0!3m2!1sko!2skr!4v1731384969429!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+</body>
+</html>

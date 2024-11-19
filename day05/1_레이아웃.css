@@ -1,0 +1,36 @@
+/* (*)전체 선택자 */
+*{
+    border: 1px solid red; /* 작업용 */
+    margin: 0px; padding: 0px; /* 기본 여백 제거 */
+    /* 박스 사이징 : 모델 크기의 기준 설정
+        1. content-box(기본값) : 테두리 전(컨텐츠/내용물) 기준으로 width/height 
+        2. border-box : 테두리까지 (컨텐츠/내용물 + 안쪽여백 + 테두리) 기준으로 width/height
+    */
+    box-sizing: border-box;
+}
+
+#wrap{
+    width: 1280px; /* 페이지의 전체 사이즈 : pc기준 1100~1300 사용 */
+    margin: 0 auto; /* 박스모델 가운데 정렬 */
+}
+#header{
+    height: 200px; /* 확인용 */ 
+}
+#main{
+    height: 500px; /* 확인용 */ 
+    display: flex;
+    flex-wrap: nowrap; /* 기본값 : 만일 자식 요소가 더 크면 크기 자동맞춤 */
+    flex-direction: row; /* 기본값 : 자식요소들 가로 방향 배치 */
+    justify-content: space-between; /* 양쪽 끝에 여백없이 균등 정렬*/
+    align-items: stretch; /* 기본값 */
+}
+#content{
+    width: 830px;
+}
+#aside{
+    width: 420px;
+}
+#footer{
+    height: 100px; /* 확인용 */ 
+
+}
