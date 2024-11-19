@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="1_포지션.css">
+</head>
+<body>
+    <!-- div 란? 레이아웃 구성할 때 구역을 나누는 마크업 division (기본css display:block) -->
+
+    <h1>position 속성</h1>
+
+    <h3>1. position: relative;</h3> <!-- 상대위치 : 본래 지정된 구역의 위치부터 시작 -->
+    <div class="box">box1</div>
+    <div class="box box2">box2</div>
+    <div class="box">box3</div>
+
+    <h3>2. position: absolute;</h3> <!-- 절대위치 : 부모 구역의 위치부터 시작 -->
+    <div class="box">box1</div>
+    <div class="box box3">box3</div>
+    <div class="box">box3</div>
+
+    <h3>3. position: static;</h3> <!-- 정적인. 고정위치(기본값) : top,left,right,bottom 속성 사용 불가능 -->
+    <div class="box">box1</div>
+    <div class="box box4">box4</div>
+    <div class="box">box3</div>
+
+    <h3>4. position: fixed;</h3> <!-- 고정된. 결정된 위치 : 디바이스(화면)의 위치 고정 -->
+    <div class="box">box1</div>
+    <div class="box box5">box5</div>
+    <div class="box">box3</div>
+
+    <h3>5. position: sticky;</h3> <!--  -->
+    <div class="parent">
+        <div class="box">box1</div>
+        <div class="box box6">box6</div>
+        <div class="box">box3</div>
+    </div>
+
+    <!-- vscode js : 자동 들여쓰기 맞춤  : shift + alt + f -->
+</body>
+</html>
