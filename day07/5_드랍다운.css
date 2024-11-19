@@ -1,0 +1,62 @@
+li{list-style-type: none;}
+*{padding: 0px; margin: 0px;}
+
+
+
+/* ==================== 예제1 ==================== */
+#header{
+    background-color: beige;
+}
+#header > ul{
+    display: flex;
+    justify-content: center;
+}
+#header > ul > li{
+    list-style-type: none;
+    padding: 20px;
+    position: relative; 
+}
+#header .submenu{
+    display: none;
+    position: absolute; /* 절대적인 위치 = (relative)조상 요소를 따라감 */ 
+    top: 50px; /* 위에서부터 아래로 이동 */
+    left: 0px;
+    background-color: beige;
+    padding: 10px;
+}
+/* 지정된 li 마크업을 hover했을 때 submenu 열기 */
+/* 선택자:hover 변경할선택자{} */
+#header > ul > .menu:hover .submenu{
+    display: block /* 기존의 display:none 값을 hover했을 때 block으로 변경 */
+}
+
+
+
+
+/* ==================== 예제2 ==================== */
+#header2{
+    background-color: skyblue;
+}
+#header2 > ul{
+    display: flex;
+    justify-content: center;
+}
+#header2 > ul > li{
+    padding: 10px;
+}
+#header2{
+    position: relative;
+}
+#header2 .submenu2{
+    position: absolute;
+    top: 40px;
+    display: none;
+    background-color: skyblue;
+    width: 100%;
+}
+/* 지정된 ul 마크업을 hover했을 때 submenu2 전체 펼치기 */
+#header2 > ul:hover .submenu2{
+    display: block;
+}
+
+
