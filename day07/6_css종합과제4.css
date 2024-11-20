@@ -60,6 +60,8 @@ a{color: black; text-decoration: none;}
     font-size: 11px;
     width: 100px;
     line-height:20px;
+    padding: 10px;
+    z-index: 101;
 }
 .header-top-menu:hover .header-top-submenu{
     display: block;
