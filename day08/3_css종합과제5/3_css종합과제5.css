@@ -1,0 +1,35 @@
+/* 와일드카드 css */
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+
+.main_banner_2{
+    width: 1920px;
+    height: 370px;
+    background-image: url(./img/main_img.jpg) no-repeat top center;
+    
+}
+
+.main_submenubox_2{
+    border-bottom: 1px solid #e5e5e5;
+    position: sticky;
+    top: 0px;
+}
+.main_submenu_2{
+    width: 430px;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+    align-items: center;
+}
