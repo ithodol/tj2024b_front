@@ -1,3 +1,5 @@
+
+
 /* 와일드카드 css */
 *{
     padding: 0;
@@ -15,11 +17,23 @@
 .main_banner_2{
     width: 1920px;
     height: 370px;
-    background-image: url(./img/main_img.jpg) no-repeat top center;
-    
+    background-image: url(./img/main_img.jpg);
+    margin: 0 auto;
+}
+.main_banner_2 > h3{
+    font-size: 55px;
+    color: #ffff;
+    text-align: center;
+    padding-top: 126px ;
+}
+.main_banner_2 > p{
+    font-size: 18px;
+    color: #ffff;
+    text-align: center;
 }
 
 .main_submenubox_2{
+    background-color: #ffff;
     border-bottom: 1px solid #e5e5e5;
     position: sticky;
     top: 0px;
@@ -32,4 +46,144 @@
     justify-content: space-between;
     font-size: 17px;
     align-items: center;
+}
+
+
+.main_cont_2{
+    width: 1250px;
+    margin: 0 auto;
+    padding-top: 135px;
+}
+
+
+.main_contbox_2{
+    display: flex;
+}
+
+
+.main_cont_left_2 > p{
+    width: 430px;
+    font-size: 40px;
+    margin-bottom: 20px;
+
+}
+.cont1_logo_2{
+    width: 193px;
+    height: 62px;
+}
+
+.cont2_logo_2{
+    width: 244px;
+    height: 62px;
+}
+.cont3_logo_2{
+    width: 200px;
+    height: 81px;
+}
+
+
+
+.main_cont_right_2{
+    width: 720px;
+}
+.main_cont_right_2 > h4{
+    font-size: 20px;
+    margin: 5px 0px;
+}
+.main_cont_right_2 > p{
+    font-size: 15px;
+}
+.main_cont_right_2 > iframe{
+    margin: 50px 0px 30px 0px;
+    width: 100%;
+}
+.main_cont_right_2 > img{
+    padding-top: 55px;
+}
+.imgmargin_2{
+    margin-bottom: 20px;
+}
+
+.sub_cont_list_2{
+    display: flex;
+    justify-content: space-between;
+}
+.sub_cont_2{
+    width: 230px;
+    height: 190px;
+    font-size: 14px;
+    position: relative;
+}
+.sub_cont_2 > img{
+    height: 130px;
+    filter: brightness(80%);
+    margin-bottom: 10px;
+}
+
+
+
+
+.video_btn_2 > img{
+    width: 54px;
+    height: 48px;
+    position: absolute;
+    top: 48px;
+    left: 90px;
+}
+
+.sub_cont_2:hover .sub_cont_2 > img{
+    border: 5px solid red;
+}
+
+
+.border1_2{
+    border: 5px solid #d61f26;
+    width: 230px;
+}
+.input_btn_2{
+    padding-top: 745px;
+}
+.input_btn2_2{
+    padding-top: 710px;
+}
+.input_btn3_2{
+    padding-top: 595px;
+}
+
+.btn_2{
+    width: 35px;
+    height: 35px;
+    font-size: 19px;
+    color: #8d8d8d;
+    font-weight: bold;
+    margin-right: 15px;
+    background-color: #ffff;
+    border: 2px solid #8d8d8d;
+}
+.btn2_2{
+    margin-right: 0px;
+    margin-left: 15px;
+}
+.main_cont_2 > h2{
+    font-size: 50px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+
+.bottom_cont_2{
+    display: flex;
+    margin-top: 60px;
+}
+.bottom_cont > h2{
+    font-size: 20px;
+}
+.bottom_cont > p{
+    font-size: 15px;
+}
+.bottom_cont_txt_2{
+    margin-left: 25px;
+}
+.bottom_cont_down_2{
+    margin-left: 63px;
 }
