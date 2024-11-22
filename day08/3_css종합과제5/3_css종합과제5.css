@@ -166,7 +166,7 @@
 }
 .main_cont_2 > h2{
     font-size: 50px;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
     text-align: center;
 }
 
@@ -174,6 +174,9 @@
 .bottom_cont_2{
     display: flex;
     margin-top: 60px;
+    margin-bottom: 170px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #ccc;
 }
 .bottom_cont > h2{
     font-size: 20px;
@@ -186,4 +189,14 @@
 }
 .bottom_cont_down_2{
     margin-left: 63px;
+}
+
+.main_btn_top_2{
+    width: 1250px;
+    margin: 0 auto;
+    text-align: end;
+    padding-top: 100px;
+}
+.main_btn_top_2 > img{
+    margin-right: 30px;
 }
