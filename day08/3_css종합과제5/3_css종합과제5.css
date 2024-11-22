@@ -13,7 +13,7 @@
     box-sizing: border-box;
 }
 
-
+/* 메인 배너 */
 .main_banner_2{
     width: 1920px;
     height: 370px;
@@ -32,6 +32,8 @@
     text-align: center;
 }
 
+
+/* 서브메뉴 */
 .main_submenubox_2{
     background-color: #ffff;
     border-bottom: 1px solid #e5e5e5;
@@ -52,30 +54,24 @@
     border-bottom: 2px solid black;
 }
 
-
+/* 메인 컨텐츠 */
 .main_cont_2{
     width: 1250px;
     margin: 0 auto;
     padding-top: 135px;
 }
-
-
 .main_contbox_2{
     display: flex;
 }
-
-
 .main_cont_left_2 > p{
     width: 430px;
     font-size: 40px;
     margin-bottom: 20px;
-
 }
 .cont1_logo_2{
     width: 193px;
     height: 62px;
 }
-
 .cont2_logo_2{
     width: 244px;
     height: 62px;
@@ -84,7 +80,6 @@
     width: 200px;
     height: 81px;
 }
-
 
 
 .main_cont_right_2{
@@ -104,9 +99,12 @@
 .main_cont_right_2 > img{
     padding-top: 55px;
 }
+
+
 .imgmargin_2{
     margin-bottom: 20px;
 }
+
 
 .sub_cont_list_2{
     display: flex;
@@ -125,8 +123,6 @@
 }
 
 
-
-
 .video_btn_2 > img{
     width: 54px;
     height: 48px;
@@ -135,9 +131,11 @@
     left: 90px;
 }
 
+/* 
 .sub_cont_2:hover .sub_cont_2 > img{
     border: 5px solid red;
 }
+*/
 
 
 .border1_2{
@@ -153,7 +151,6 @@
 .input_btn3_2{
     padding-top: 595px;
 }
-
 .btn_2{
     width: 35px;
     height: 35px;
@@ -174,7 +171,7 @@
     text-align: center;
 }
 
-
+/* 메인 컨텐츠4 (BI) */
 .bottom_cont_2{
     display: flex;
     margin-top: 60px;
@@ -195,13 +192,14 @@
     margin-left: 63px;
     padding-top: 25px;
 }
-
 .main_btn_top_2{
     width: 1250px;
     margin: 0 auto;
     text-align: end;
     padding-top: 70px;
 }
+
+/* top 버튼 */
 .main_btn_top_2 > img{
     margin-right: 30px;
 }
