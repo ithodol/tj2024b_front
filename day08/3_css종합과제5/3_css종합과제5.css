@@ -47,6 +47,10 @@
     font-size: 17px;
     align-items: center;
 }
+.main_submenu_2 > li:hover{
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
 
 
 .main_cont_2{
