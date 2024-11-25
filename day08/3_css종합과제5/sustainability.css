@@ -1,0 +1,206 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    box-sizing: border-box;
+}
+/* 전체구역 css */
+
+#header{
+    background-color: #fa0050; display: flex;
+    justify-content: space-between; align-items: center;
+    padding: 0px 50px;
+}
+#header > #h_logo img{
+    width: 100px;
+}
+#header > #h_ul{
+    display: flex; justify-content: space-between; width: 730px;
+}
+#header > #h_ul li a{
+    display: block; line-height: 80px;
+
+}
+
+#header > #h_ul li a p {
+    position: relative;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+#header > #h_ul li a p::after {
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: 0;
+    margin-top: -1px; /* 높이의 절반 값 */
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transform: scaleX(0); /* 처음에는 보이지 않음 */
+    transform-origin: center; /* 중심에서 양쪽으로 퍼짐 */
+    transition: transform 0.4s ease-out;
+}
+
+#header > #h_ul li a:hover p::after,
+#header > #h_ul li .active4 p::after {
+    transform: scaleX(1); /* 호버 시 전체 너비로 확대 */
+}
+
+
+#header > #h_site{
+    display: flex; justify-content: space-between; width: 100px;
+}
+/* 헤더 fin*/
+
+#content3{
+    background-image: url('./img/mainimg.jpg'); background-position: center; background-repeat: no-repeat;
+    height: 370px; display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+}
+#content3 span{
+    color: white; font-weight: 900; font-size: 50px;
+    letter-spacing: 10px;
+}
+#content3 p{
+    color: white; margin-top: 15px;
+}
+/* 메인 이미지 css fin*/
+
+#main3 > #CSR{
+    border: 1px solid #e5e5e5;
+    text-align: center; margin-bottom: 100px;
+}
+#main3 > #CSR a{
+    font-size: 18px; display: block;
+    line-height: 50px;
+}
+#main3 > #CSR a:hover{
+    text-decoration: underline; 
+    text-underline-offset: 10px;
+    font-weight: bold;
+}
+/* CSR fin*/
+
+#main3 > #maincenter{
+    width: 1250px; margin: 0 auto;
+    text-align: center;
+}
+#main3 > #maincenter h2{
+    font-size: 50px;
+}
+#main3 > #maincenter > hr{
+    background: #d61f26; margin: 20px auto;
+    height: 2px; width: 20px; border: 0px;
+}
+#main3 > #maincenter > p{
+    font-size: 36px; font-weight: bold; margin-bottom: 50px;
+}
+#main3 > #maincenter > #maindown a{
+    margin-bottom: 30px; display: block;
+}
+#main3 > #maincenter > #maindown a img{
+    width: 1250px;
+}
+#main3 > #maincenter #mainclean{
+    display: flex; 
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+#main3 > #maincenter #mainclean li{
+    border: 1px solid #e5e5e5; width: 280px; overflow: hidden;
+}
+#main3 > #maincenter #mainclean li:hover img{
+    transform: scale(110%);
+    transition: 1s ease-in; 
+}
+
+#main3 > #maincenter #mainclean li a span{
+    display: block ; color: #1f53d6; font-weight: bold;
+    text-align: left; padding: 10px 15px 10px 15px;
+}
+#main3 > #maincenter #mainclean li a p{
+    padding: 0px 15px 20px 15px; text-align: left;
+}
+#main3 > #maincenter #mainslide{
+    display: flex; justify-content: center;
+    margin-bottom: 200px;
+}
+#main3 > #maincenter #mainslide li:not(:last-child){
+    margin-right: 5px;
+}
+#main3 > #maincenter #mainslide li a{
+    text-indent: -9999px;display: block;
+    width: 12px; height: 12px; border-radius: 100px;
+    background-color: #f5b5b2; 
+}
+#main3 > #maincenter #mainslide li >.active,
+#main3 > #maincenter #mainslide li a:hover{
+    background-color: #e00900;
+}
+/* maincenter fin*/
+
+#main3 > #topbtn{
+    width: 1250px; margin: 0 auto; text-align: right;
+    margin-bottom: 20px;
+}
+/* topbtn finn*/
+
+#footer{
+    background-color: #333333; 
+}
+#footer > #foom{
+    width: 1250px; margin: 0 auto; display: flex;
+    align-items: center; padding: 50px 0px;
+    justify-content: space-between;
+}
+#footer > #foom > #foofont{
+    margin-right: 280px;
+}
+#footer > #foom > #foofont p{
+    color: white; font-weight: bold; font-size: 20px;
+    margin-bottom: 10px;
+}
+#footer > #foom > #foofont span{
+    color: white; font-size: 14px;
+}
+#footer > #foom > #foofont #address{
+    margin-right: 15px;
+}
+#footer > #foom > #foolink{
+    text-align: right;
+}
+#footer > #foom > #foolink > a{
+    margin-bottom: 20px; display: block;
+}
+#footer > #foom > #foolink > ul{
+    display: flex; justify-content: center;
+}
+#footer > #foom > #foolink > ul .dropbox1 ul li{
+    background-color: #494949; text-align: left;
+    padding: 7px 44px 7px 15px;
+}
+#footer > #foom > #foolink{
+    position: relative;
+}
+#footer > #foom > #foolink > ul .dropbox1{
+    position: absolute; top: 25px; display: none;
+    border-bottom: 1px solid #e5e5e5;
+}
+#footer > #foom > #foolink > ul .dropbox1 ul li a{
+    color: lightgray; font-size: 12px;
+    display: block; 
+}
+#footer > #foom > #foolink > ul .dropbox1 ul li a:hover{
+    color: white;
+}
+#footer > #foom > #foolink > ul:hover .dropbox1{
+    display: block;
+}
+/* footer  fin */

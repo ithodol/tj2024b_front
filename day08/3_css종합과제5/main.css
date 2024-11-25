@@ -1,0 +1,351 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+
+
+/* 헤더 */
+#header{
+    background-color: #fa0050; display: flex;
+    justify-content: space-between; align-items: center;
+    padding: 0px 50px;
+}
+#header > #h_logo img{
+    width: 100px;
+}
+#header > #h_ul{
+    display: flex; justify-content: space-between; width: 730px;
+} 
+#header > #h_ul li a{
+    display: block; line-height: 80px;
+
+}
+
+#header > #h_ul li a p {
+    position: relative;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+#header > #h_ul li a p::after {
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: 0;
+    margin-top: -1px; /* 높이의 절반 값 */
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transform: scaleX(0); /* 처음에는 보이지 않음 */
+    transform-origin: center; /* 중심에서 양쪽으로 퍼짐 */
+    transition: transform 0.4s ease-out;
+}
+
+#header > #h_ul li a:hover p::after,
+#header > #h_ul li .active p::after {
+    transform: scaleX(1); /* 호버 시 전체 너비로 확대 */
+}
+
+
+#header > #h_site{
+    display: flex; justify-content: space-between; width: 100px;
+}
+
+
+
+
+.hero {
+    background-image: url('./img/main_slide1.png');
+    background-size: cover;
+    /* border: 1px solid black; */
+    height: 70vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+    position: relative;
+    padding-left: 50px;
+}
+
+.hero-content {/* 메인슬라이드에 삽입된 문구 박스*/
+    max-width: 600px;
+}
+
+.hero-content>h1{
+    /* 메인슬라이드에 삽입된 타이틀 문구 */
+    font-size: 2.7em;
+    color: white;
+}
+.hero-content>p{/* 메인슬라이드에 삽입된 내용 문구 */
+    font-size: 1.4em;
+    margin-top: 20px;
+    color: white;
+    width: 400px;
+}
+.scroll-down {/* 메인슬라이드 중앙 아래쪽 스크롤 아이콘 */
+    /* background-color: red; */
+    text-align: center;
+    margin: auto;
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 20px; /* 중앙 아래쪽 위치 */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.service {
+    margin-top: 100px;
+    text-align: center;
+}
+
+
+.service-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.service-items {/* service 슬라이드 담는 박스 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.service-item {/* service 개별 슬라이드 */
+    position: relative;
+    flex: 0 0 auto; 
+    margin: 0 20px; 
+    width: 75%;
+}
+.service-items >.blurred{
+    width: 70%;
+
+}
+.service-item img {
+    width: 100%;
+    height: auto;
+}
+
+.service-item iframe{
+    float: left;
+}
+
+.service > p{/* 배달앱 최초 전국 즉시 장보기 서비스 */
+    font-weight: bold;
+    font-size: 28px;
+    margin-top: 10px;
+}
+.yogiyo-logo {
+    width: 9%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.yogiyo-logo img{
+    width: 100%;
+    height: 100%;
+}
+
+.blurred img {/* 흐리게 처리한 사이드 이미지들 */
+    width: 100%;
+    height: auto;
+    filter: blur(1px); /* 흐리게 처리 */
+}
+
+/* 뉴스룸 시작 */
+.newsroom {
+    margin-top: 150px;
+    padding: 130px 0 190px;
+    background-color: #f5f5f6;
+    position: relative;
+}
+
+.newsroom-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.newsroom-items {/* 뉴스룸 슬라이드 담는 전체 박스 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    
+}
+
+.newsroom-item {
+    position: relative;
+    flex: 0 0 auto;
+    margin: 0 10px; /* 이미지 간 여백 */
+    width: 20%;
+    background-color: white;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.newsroom-item:hover > img{
+    transform: scale(1.2);
+    transition-duration: 0.3s;
+}
+.newsroom-item:hover:not(.blurred){
+    border:5px solid red
+}
+.newsroom-item img {
+    height: 100%;
+    width: 100%;
+}
+.newsroom-content{/* 보도자료,요기요....., 날짜  박스*/
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    position: relative;
+    z-index: 999;
+    background-color: white;
+}
+.newsroom-content>div{
+    padding: 5px;
+}
+.newsroom-content>div:nth-child(1)/* 보도자료 */{
+    color: rgb(57, 115, 241);
+}
+.newsroom-content>div:nth-child(2)/* 요기요, 화제의.... */{
+    font-size: 14px;
+}
+.newsroom-content>div:nth-child(3)/* 날짜 */{
+    font-size: 12px;
+    color: #aaa8a8;
+}
+
+.topButton{/* 오른쪽 하단 탑버튼 */
+    position: absolute;
+    bottom: 20px;
+    right: 70px;
+    transition-duration: 0.2s;
+}
+.topButton:hover{
+    position: absolute;
+    bottom: 30px;
+    right: 70px;
+}
+/* -----------------------------------공통 클라스 */
+.content-title{
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.blurred {
+    /* 슬라이드 양쪽 사이드 블러처리 이미지들 */
+    filter: blur(2px); 
+    /* width: 30%; */
+}
+.arrow-button {/* 화살표, 서비스,뉴스룸 */
+    border: 0;
+    width: 100px;
+    height: 100px;
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 100%;
+    font-size: 5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
+    transition-duration: 0.3s;
+}
+.arrow-button img{
+    width: 50%;
+    height: 50%;
+}
+.arrow-button.left {/* 화살표 왼쪽 버튼 */
+    left: 3%;
+}
+.arrow-button.left:hover{
+    left: 2%;
+}
+.arrow-button.right {
+    right: 3%; /* 화살표 오른쪽 버튼 */
+}
+.arrow-button.right:hover {
+    right: 2%; /* 화살표 오른쪽 버튼 */
+}
+.red-line{/* 뉴스룸  SERVICE 문구 아래 빨간선*/
+    width: 20px;
+    margin : 0 auto;
+    border-color: red;
+    margin-top: 10px;
+}
+
+
+/* 푸터 */
+#footer{
+    background-color: #333333; 
+}
+#footer > #foom{
+    width: 1250px; margin: 0 auto; display: flex;
+    align-items: center; padding: 50px 0px;
+    justify-content: space-between;
+}
+#footer > #foom > #foofont{
+    margin-right: 280px;
+}
+#footer > #foom > #foofont p{
+    color: white; font-weight: bold; font-size: 20px;
+    margin-bottom: 10px;
+}
+#footer > #foom > #foofont span{
+    color: white; font-size: 14px;
+}
+#footer > #foom > #foofont #address{
+    margin-right: 15px;
+}
+#footer > #foom > #foolink{
+    text-align: right;
+}
+#footer > #foom > #foolink > a{
+    margin-bottom: 20px; display: block;
+}
+#footer > #foom > #foolink > ul{
+    display: flex; justify-content: center;
+}
+#footer > #foom > #foolink > ul .dropbox1 ul li{
+    background-color: #494949; text-align: left;
+    padding: 7px 44px 7px 15px;
+}
+#footer > #foom > #foolink{
+    position: relative;
+}
+#footer > #foom > #foolink > ul .dropbox1{
+    position: absolute; top: 25px; display: none;
+    border-bottom: 1px solid #e5e5e5;
+}
+#footer > #foom > #foolink > ul .dropbox1 ul li a{
+    color: lightgray; font-size: 12px;
+    display: block; 
+}
+#footer > #foom > #foolink > ul .dropbox1 ul li a:hover{
+    color: white;
+}
+#footer > #foom > #foolink > ul:active .dropbox1{
+    display: block;
+}
