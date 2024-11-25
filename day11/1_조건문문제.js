@@ -117,6 +117,14 @@
     else{console.log('[5] 결과 : 재시험');}
 */
 
+let 점수1 = Number(prompt(''))
+let 점수2 = Number(prompt(''))
+
+let 평균 = (점수1 + 점수2) /2;
+if(평균 >= 90){console.log('A등급');}
+else if(평균 >= 80){console.log('B등급');}
+else if(평균 >= 70){console.log('C등급');}
+else{console.log('재시험');}
 
 
 
