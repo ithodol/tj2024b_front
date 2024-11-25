@@ -84,6 +84,8 @@
     border-right: 1px solid #d9d9d9;
 }
 
+
+/* 지도 */
 .map_2{
     position: relative;
 }
@@ -114,6 +116,7 @@ iframe{
     top: 148px;
     left: 560px;
 }
+
 
 /* top 버튼 */
 .main_btn_top_2{
