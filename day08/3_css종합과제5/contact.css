@@ -108,7 +108,11 @@ iframe{
 }
 .map_pix_2 > h3{
     padding-bottom: 40px;
-
+}
+.map_marker_2{
+    position: absolute;
+    top: 148px;
+    left: 560px;
 }
 
 /* top 버튼 */
