@@ -9,8 +9,15 @@
     1. console.log()        정의 : [console]탭에 출력하는 함수 / 매개변수 : 출력할 데이터 / 반환값 : X
     2. document.write()     정의 : HTML body마크업에 출력하는 함수 / 매개변수 : 출력할 데이터 / 반환값 : x
     3. prompt()             정의 : HTML 알림창으로부터 입력받은 함수 / 매배변수 : 알람 메세지 / 변환값 : (String)입력받은 값
-
+    4. document.querySelector
+    
 [타입 변환 함수]
     1. Number()             정의 : 숫자타입으롤 변환하는 함수 / 매개변수 : 변환할 데이터 / 반환값 : 변환된 숫자데이터
     2. String()             정의 : 문자열타입으로 변환하는 함수 / 매개변수 : 변환할 데이터 / 반환값 : 변환된 문자열데이터
     3. parseInt()           정의 : 정수타입으로 변화환하는 함수 / 매개변수 : 변환할 데이터 / 반환값 : 변환된 정수데이터
+
+
+
+        document.querySelector(".클래스명")
+    document.querySelector('#id명')
+    document.querySelector('마크업명')
