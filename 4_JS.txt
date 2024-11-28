@@ -163,3 +163,20 @@
     7. html 마크업 이벤트 속성
         - <마크업 onxxxx="js코드"/>
             1. onclick : 마크업을 클릭햇을 때 실행되는 js코드
+
+[날짜/시간 함수]
+    1. let nowDate = new Date() : 현재 시스템의 날짜와 시간을 반환해주는 객체 생성
+        2024-11-28 12:35:25
+    2. Date객체 함수
+        nowDate.getFullYear()   : 현재 날짜의 연도 반환, 2024
+        nowDate.getMonth()      : 현재 날짜의 월(0:1월 11:12월)반환, 10(11월), +1
+        nowDate.getDate()       : 현재 날짜의 일 반환, 28
+        nowDate.getHours()      : 현재 시간의 시 반환, 12
+        nowDate.getMinutes()    : 현재 시간의 분 반환, 28
+        nowDate.getSeconds()    : 현재 시간의 초 반환, 25
+    3. 주의할점 : 월과 일이 한자리수면 한자리수로 반환됨 두자리수로 맞추는 게 좋음
+        2월 -> 1 -> 01
+        nowDate.getMonth()+1 < 10 ? "0" +(nowDate.getMonth()+1) : nowDate.getMonth()+1
+        만약 월이 10미만(한자릿수 1월~9월)이면 0을 연결해주고, 아니면 0을 안 붙임
+        ex) 3월(2)      : 2+1 < 10 ? "0"3 : 3
+        ex) 11월(10)    : 10+1 < 11 ? "0"11 : 11
