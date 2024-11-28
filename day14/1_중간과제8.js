@@ -161,14 +161,22 @@ function 상세출력함수(index){ // index : 매개변수, 상세 출력할 �
     document.querySelector('.contentBox').innerHTML = info[1]; // 내용 데이터를 .contentBox 마크업에 사이에 대입
     document.querySelector('.dateBox').innerHTML = info[3]; // 작성일 데이터를 .dateBox 마크업에 사이에 대입
     document.querySelector('.viewBox').innerHTML = info[4]; // 조회수 데이터를 .viewBox 마크업에 사이에 대입
+    document.querySelector('.btnBox').innerHTML = `<button onclick="삭제함수(${index})" type="button">삭제</button>
+                                                    <button type="button">수정</button>`
 } // f end
 
 
 
 
 // [4] 삭제함수 , 실행조건 : [삭제]버튼 클릭시
-function 삭제함수(){
-
+function 삭제함수(index){ // 매개변수, 삭제할 인덱스 번호
+    console.log('삭제함수 실행');
+    console.log(index);
+    // 1. 배열내 특정한 인덱스의 요소 제거, 배열변수명.splice(삭제할인덱스, 갯수)
+    게시물목록.splice(index, 1); // 내가 선택한 게시물의 인덱스를 삭제
+    // 2. 화면 새로고침 / 다시 출력 / 다시 함수 호출
+    출력함수();
+    
 } // f end
 
 
