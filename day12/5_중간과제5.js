@@ -20,7 +20,7 @@
             ㅁ  ㅁ
 */
 
-    // [문제1] 풀이
+    // [문제1]
         /* 
         let movieNames = ['히든페이스', '위키드', '글래디에이터2', '청설']
         let movieRating = [8,4,7,6]
@@ -37,5 +37,5 @@
         let movieNames = ['히든페이스', '위키드', '글래디에이터2', '청설']
         let movieRating = [8,4,7,6]
         for( let i = 0; i < movieNames; i++){
-            
+            let star = movieNames[i];
         }
