@@ -135,24 +135,47 @@ function 출력함수(){
             // 각 정보들을 HTML과 연동해서 작성
             html += `<tr> 
                         <td>${info[3]}</td>
-                        <td>${info[0]}</td>
+                        <td> <a href="#" onclick="상세출력함수(${index})">${info[0]}</a> </td>
                         <td>${info[4]}</td>
                     </tr>` // 변수 +=값  vs  변수 = 변수 + 값, 기존 변수에 새로운 값을 누계/연결
         }
 
     // (3) 출력 , .innerHTML
     tbody.innerHTML = html; // 변수 = 새로운값 , .변수 = 새로운값
-}
+} // f end
+
+
+// [3-1] 상세 출력 함수 , 실행조건 : 전체출력화면에서 특정한 제목을 클릭했을 때
+function 상세출력함수(index){ // index : 매개변수, 상세 출력할 배열의 인덱스를 받기
+    console.log('상세출력함수 실행'); console.log(index);
+
+    // (1) 어디에 : document.querySelector()
+
+    // (2) 무엇을 : 배열 정보를 HTML로 구성, 선택한 게시물 인덱스의 정보를, index
+    let board = 게시물목록[index]; // 선택한 인덱스의 게시물 호출
+    let info = board.split(','); // 게시물 문자열 쉼표(,) 기준으로 분해
+        // info[0] = 제목, info[1] = 내용, info[2] = 비밀번호, info[3] = 날짜, info[4] = 조회수
+
+    // (3) 출력 : .innerHTML
+    document.querySelector('.titleBox').innerHTML = info[0]; // 제목 데이터를 .titleBox 마크업에 사이에 대입
+    document.querySelector('.contentBox').innerHTML = info[1]; // 내용 데이터를 .contentBox 마크업에 사이에 대입
+    document.querySelector('.dateBox').innerHTML = info[3]; // 작성일 데이터를 .dateBox 마크업에 사이에 대입
+    document.querySelector('.viewBox').innerHTML = info[4]; // 조회수 데이터를 .viewBox 마크업에 사이에 대입
+} // f end
+
 
 
 
 // [4] 삭제함수 , 실행조건 : [삭제]버튼 클릭시
 function 삭제함수(){
 
-}
+} // f end
+
+
 
 
 // [5] 수정함수 , 실행조건 : [수정]버튼 클릭시
 function 수정함수(){
 
-}
+} // f end
+
