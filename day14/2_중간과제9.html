@@ -3,10 +3,34 @@
 <head>
 
 </head>
+<style>
+        body{
+        width:500px;
+        margin: 0 auto;
+    }
+
+    .main{
+        text-align: center;
+    }
+
+    table{
+        margin: 0 auto;
+    }
+    h1{
+        text-align: center;
+    }
+    hr{
+        margin: 30px 0px;
+    }
+    .deleteBox{
+        text-align: end;
+    }
+    
+</style>
 <body>
-    <div style="margin-bottom: 50px;">
+    <div class="main">
         <h1>메인</h1>
-        <img style="margin-bottom: 20px;" src="/스폰지밥.jpg"/><br/>
+        <img src="/스폰지밥.jpg"/><br/>
         <button class="carIn" type="button">입차</button>
         <button class="carOut" type="button">출차</button>
     </div>
@@ -15,7 +39,7 @@
 
     <div>
         <h1>입차</h1>
-        <table border="10" >
+        <table border="10">
             <tr>
                 <td class="a1">a1</td>
                 <td class="a2">a2</td>
@@ -42,44 +66,45 @@
             </tr>
         </table>
     </div>
-
-    <form>
-        <label for="seat">주차자리선택</label>
-        <select class="carLocation" name="seat" id="seat">
-          <option value="none">=== 선택 ===</option>
-          <option value="a1">a1</option>
-          <option value="a2">a2</option>
-          <option value="a3">a3</option>
-          <option value="a4">a4</option>
-          <option value="a5">a5</option>
-          <option value="a6">a6</option>
-          <option value="a7">a7</option>
-          <option value="a8">a8</option>
-          <option value="a9">a9</option>
-          <option value="a10">a10</option>
-          <option value="a11">a11</option>
-          <option value="a12">a12</option>
-          <option value="a13">a13</option>
-          <option value="a14">a14</option>
-          <option value="a15">a15</option>
-          <option value="a16">a16</option>
-          <option value="a17">a17</option>
-          <option value="a18">a18</option>
-          <option value="a19">a19</option>
-          <option value="a20">a20</option>
-        </select>
-      </form>
-      
-      <label for="carNumber">차량번호</label>
-      <input id="carNumber" type="text" class="carNum" />
-      <button onclick="inCar()" type="button">등록</button>
-      <hr/>
+    <div>
+        <form>
+            <label for="seat">주차자리선택</label>
+            <select class="carLocation" name="seat" id="seat">
+            <option value="none">=== 선택 ===</option>
+            <option value="a1">a1</option>
+            <option value="a2">a2</option>
+            <option value="a3">a3</option>
+            <option value="a4">a4</option>
+            <option value="a5">a5</option>
+            <option value="a6">a6</option>
+            <option value="a7">a7</option>
+            <option value="a8">a8</option>
+            <option value="a9">a9</option>
+            <option value="a10">a10</option>
+            <option value="a11">a11</option>
+            <option value="a12">a12</option>
+            <option value="a13">a13</option>
+            <option value="a14">a14</option>
+            <option value="a15">a15</option>
+            <option value="a16">a16</option>
+            <option value="a17">a17</option>
+            <option value="a18">a18</option>
+            <option value="a19">a19</option>
+            <option value="a20">a20</option>
+            </select>
+        </form>
+        
+        <label for="carNumber">차량번호</label>
+        <input id="carNumber" type="text" class="carNum" />
+        <button onclick="inCar()" type="button">등록</button>
+        <hr/>
+      </div>
     <div>
         <h1> 출차 </h1>
         주차 위치 : <span class="carLocation" >  </span> <br/>
-        차량 번호 : <span class="carNumber">  </span> <hr/>
+        차량 번호 : <span class="carNumber">  </span> <br/>
         입차 시간 : <span class="inCarTime"> </span> 
-        출차 시간 : <span class="outCarTime">  </span> <hr/>
+        출차 시간 : <span class="outCarTime">  </span> <br/>
         주차료(금액) : <span class ="price"></span> 
                         
         <div class="deleteBox">
