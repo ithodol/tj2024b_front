@@ -1,63 +1,70 @@
+<!--
+    주제 : 인사관리 시스템
+    1. 인사 정보 등록 
+        - 이름 생년월일 등등 그외 임의 추가
+        -각 정보들을 HTML로 입력받아서JS에서 등록처리하기
+
+    2. 전체 인사 정보 출력 내역 :
+        - 현재 등록된 모든 인사 정보를 출력
+
+    3. 각 인사별 점수 등록 : 각 인사별 '상반기,하반기' 등등 그외 임의 추가
+        - 각 상반기, 하반기 점수를 HTML로 입력받아서 JS에서 등록처리하기
+
+    4. 각 인사별 전체 점수 정보 출력 내역
+        - 각 인사별 점수를 출력하시오.
+    
+
+    1. 위 요구사항에 따른 화면 설계/구성
+    2. 위 요구사항에 메모리(변수/배열/csv) 설계/구성
+-->
 <!DOCTYPE html>
 <html>
 <head>
     <script src='2_중간과제10.js'></script>
 </head>
 <body>
+    
     <div>
-        <h1>인사 정보 등록</h1>
-        이름 : <input type="text"/> <br/>
-        생년월일 : <input type="text"/> <br/>
-        <button type="button">등록</button>
-    </div>
+        <h1> 인사 정보 등록 </h1>
+        사번 : <input id="id" type="text"/><br/>
+        이름 : <input id="name" type="text"/><br/>
+        생년월일 : <input id="birth" type="date"/><br/>
+        <button onclick="newJoin()" type="button">등록</button>
 
-
-    <hr/>
-
-
-    <div>
-        <h1>전체 인사 정보</h1>
-        <table border="10">
-            <tr> <th>이름</th> <th>생년월일</th> </tr>
-            <tr>
-                <td>유재석</td> <td>2004.07.07</td>
-            </tr>
-            <tr>
-                <td>강호동</td> <td>1998.08.12</td>
-            </tr>
+        <hr/>
+        <h1>전체 인사 정보 출력 </h1>
+        <table border="1"> 
+            <thead> <tr> <th>사번</th> <th>이름</th> <th>생년월일</th> </tr> </thead>
+            <tbody> 
+                <tr> <td> 1 </td> <td> 홍길동 </td> <td> 2001.01.01 </td> </tr>
+                <tr> <td> 2 </td> <td> 김영수 </td> <td> 1998.12.19 </td> </tr>
+                <tr> <td> 3 </td> <td> 김철수 </td> <td> 1990.11.29 </td> </tr>
+            </tbody> 
         </table>
+        <hr/>
+        <h1> 각 인사별 점수 등록 </h1>
+        사번 : <input type="text" id="personid"/><br/>
+        년도 : <input type="text" id="personyear"/><br/>
+        상반기점수 : <input type="text" id="person1score"/><br/>
+        하반기점수 : <input type="text" id="person2score"/>
+        <button type="button" onclick="newScore()">등록</button>
+        <hr/>
+        <div id="scoreBox">
+            <h1>각 인사별 점수 출력 </h1>
+        사번 : <input id="inputIDNumber" type="text"/>
+        <button onclick="search()" >검색</button><br/>
+        <table border="1"> 
+            
+            <thead> <tr>   <th>년도</th> <th>상반기</th><th>하반기</th></tr> </thead>
+            <tbody> 
+
+            </tbody> 
+        </table>
+        </div>
+        
+
     </div>
 
     
-    <hr/>
-
-
-    <div>
-        <h1>점수 등록</h1>
-        이름 : <input type="text"/> <br/>
-        생년월일 : <input type="text"/> <br/>
-        상반기 점수 : <input type="text"/> <br/>
-        하반기 점수 : <input type="text"/> <br/>
-        <button type="button">등록</button>
-    </div>
-
-
-    <hr/>
-
-
-    <div>
-        <h1>전체 점수</h1>
-        <table border="10">
-            <tr> <th>이름</th> <th>전체점수</th> </tr>
-            <tr>
-                <td>유재석</td> <td>200</td>
-            </tr>
-            <tr>
-                 <td>강호동</td> <td>180</td>
-            </tr>
-        </table>
-    </div>
-
-
 </body>
 </html>
