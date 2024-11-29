@@ -43,6 +43,8 @@ function inCar() {
     let carLocation = document.querySelector(".carLocation").value; 
     let carNum = document.querySelector("#carNumber").value; // ID를 기준으로 선택
 
+    let color = document.querySelector(`.${carLocation}`);
+
     if (carLocation === "none" || carNum === "") {
         alert("주차 자리와 차량 번호를 모두 입력해주세요!");
         return;
@@ -66,8 +68,8 @@ function inCar() {
         }
     }
     alert("입차성공");
+    color.style.backgroundColor = 'red';
 
-    // document.querySelector("."+carLocation).className +=" red";
     carInfo.push(board);
     console.log(carInfo);
 
