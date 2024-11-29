@@ -14,6 +14,13 @@
     [개발순서]
     1. 프론트엔드 html 구성
     2. JS 메모리구성 (배열/변수/CSV)
+        - 목표에 따른 기록 정보 : 차량번호, 주차위치, 입차시간, 요금, 출차시간, 차주이름
+        - 정보 예시
+            [차1대]
+            "111어1111"
+
+
+
     3. 함수 구성(함수명, 실행조건, 매개변수 판단. 어떠한 함수가 필요한지)
     4. 각 함수별 기능 구현, 코드 작성
     5. 각 함수별 기능 구현 후 HTML(onclick) 연동
@@ -49,22 +56,18 @@ function inCar() {
 
     let board = `${carLocation}, ${carNum}, ${time}`;
 
-//console.log('for 시작');
-    // 주차장 자리 확인
+
     for(let index = 0; index <= carInfo.length -1; index++){
-        //console.log(index+" 번 째 주차 구역");
         let full = carInfo[index]
         let info = full.split(',')
-        //console.log(info);
-        //console.log(info[0]);
         if(info[0] == carLocation){
-            alert("주차불가");
+            alert("입차불가");
             return;
         }
     }
-    alert("주차성공");
-//console.log('for 끝');
-    //document.querySelector("."+carLocation).className +=" red";
+    alert("입차성공");
+
+    // document.querySelector("."+carLocation).className +=" red";
     carInfo.push(board);
     console.log(carInfo);
 
