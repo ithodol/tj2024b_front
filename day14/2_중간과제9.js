@@ -30,48 +30,42 @@
 
 */
 
-
 let carInfo = [];
 
-  function inCar() {
+function inCar() {
     let carLocation = document.querySelector(".carLocation").value; 
     let carNum = document.querySelector("#carNumber").value; // ID를 기준으로 선택
 
     if (carLocation === "none" || carNum === "") {
-      alert("주차 자리와 차량 번호를 모두 입력해주세요!");
-      return;
+        alert("주차 자리와 차량 번호를 모두 입력해주세요!");
+        return;
     }
 
     let today = new Date();   
-        let hours = today.getHours(); 
-        let minutes = today.getMinutes();  
-        let seconds = today.getSeconds();  
-            let time = `${hours}:${minutes}:${seconds}`
+    let hours = today.getHours(); 
+    let minutes = today.getMinutes();  
+    let seconds = today.getSeconds();  
+    let time = `${hours}:${minutes}:${seconds}`
 
     let board = `${carLocation}, ${carNum}, ${time}`;
+
+//console.log('for 시작');
+    // 주차장 자리 확인
+    for(let index = 0; index <= carInfo.length -1; index++){
+        //console.log(index+" 번 째 주차 구역");
+        let full = carInfo[index]
+        let info = full.split(',')
+        //console.log(info);
+        //console.log(info[0]);
+        if(info[0] == carLocation){
+            alert("주차불가");
+            return;
+        }
+    }
+    alert("주차성공");
+//console.log('for 끝');
+    //document.querySelector("."+carLocation).className +=" red";
     carInfo.push(board);
     console.log(carInfo);
 
-  }
-
-
-
-functionIn();
-function functionIn(){
-    let table = document.querySelector('table')
-    let html = ''
-
-    for(let index = 0; index <= carInfo.length -1; index++){
-
-
-    }
 }
-
-/*
-for(){
-    if(){
-    }esle
-}
-
-    
-*/
