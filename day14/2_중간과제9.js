@@ -72,5 +72,4 @@ function inCar() {
 
     carInfo.push(board);
     console.log(carInfo);
-
 }
