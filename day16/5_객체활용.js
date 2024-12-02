@@ -26,20 +26,198 @@
 
 // [1] 객체지향으로 메모리 구성
     // (1) 두 사원의 객체 정보를 샘플화해서 2개의 객체 생성
-let 사원1 = {no : 1, name : '유재석', birth : '2000-10-02'}
-let 사원2 = {no : 2, name : '강호동', birth : '1980-01-25'}
+let 사원1 = {사원번호 : 1, 사원명 : '유재석', 생년월일 : '2000-10-02'}
+let 사원2 = {사원번호 : 2, 사원명 : '강호동', 생년월일 : '1980-01-25'}
     // (2) 사원목록 등록
 let 사원목록 = []
 사원목록.push(사원1); // 사원1 등록
 사원목록.push(사원2); // 사원2 등록
 console.log(사원목록); // 현재 전체 사원의 정보 전체 출력
     // (3) 유재석의 2024 평가 등록
-let 점수1 = {no : 1, year : '2024', first : 100, second : 80}; // 유재석의 2024 평가 등록
-let 점수2 = {no : 2, year : '2024', first : 92, second : 71}; // 강호동의 2024 평가 등록
-let 점수3 = {no : 1, year : '2023', first : 82, second : 97}; // 강호동의 2024 평가 등록
+let 점수1 = {사원번호 : 1, 연도 : '2024', 상반기 : 100, 하반기 : 80}; // 유재석의 2024 평가 등록
+let 점수2 = {사원번호 : 2, 연도 : '2024', 상반기 : 92, 하반기 : 71}; // 강호동의 2024 평가 등록
+let 점수3 = {사원번호 : 1, 연도 : '2023', 상반기 : 82, 하반기 : 97}; // 강호동의 2024 평가 등록
     // (4) 평가 목록 등록
 let 평가목록 = []
 평가목록.push(점수1);
 평가목록.push(점수2);
 평가목록.push(점수3);
 console.log(평가목록); // 평가 목록내 세번재 위치한 점수는 누구의 점수인가요? => '유재석'
+
+
+// ** 사원번호 전역변수 **
+let eno = 3; // 샘플이 2개라서 다음 등록된 사원 번호는 3번부터 시작하기 때문
+
+
+
+// [1] 사원등록 함수, 실행조건 : [사원등록]버튼 클릭할 때
+function 사원등록(){
+    // 1. 입력
+    let name = document.querySelector('.name').value;
+    let birth = document.querySelector('.birth').value;
+    // 2. 처리
+    //    - 입력받은 값을 객체{ 속성명 : 입력받은값 }로 만들기
+    let info = { 
+        사원번호 : eno, // 자동으로 1씩 증가 
+        사원명 : name, // 입력받은 name
+        생년월일 : birth // 입력받은 birth
+    }
+    //console.log(info);
+
+    // 생성한 객체를 배열에 추가하기
+    사원목록.push(info);
+
+    eno++; // 만일 사원등록 성공시 eno(사원번호)를 1 증가한다. -> 다음 등록 회원은 1 증가된 사원번호를 받을 예정
+
+    // 3. 출력
+    //console.log(사원목록);
+    사원전체출력();
+}
+
+
+
+
+// [2] 사원 정보 전체 출력함수. ** 실행조건 : 1.JS 실행될 때 최초 1번, 2.사원목록(배열) 변화(저장/수정/삭제)가 있을 때마다
+사원전체출력();
+function 사원전체출력(){
+    // 1. 어디에
+    let tbody = document.querySelector('.사원테이블')
+    // 2. 무엇을
+    let html = ``;
+        // 사원목록내 모든 사원정보를 HTML로 구성하기
+    for(let index = 0; index <= 사원목록.length -1; index++){
+        let info = 사원목록[index] // index번째의 사원정보 1개 호출
+        html += `<tr>
+                    <td>${info.사원번호}</td>
+                    <td>${info.사원명}</td>
+                    <td>${info.생년월일}</td>
+                    <td>
+                        <button onclick="평가등록출력(${info.사원번호})" type="button">평가등록</button>
+                        <button type="button">평가결과</button>
+                    </td>
+                </tr>`
+    } // for end
+
+    // 3. 출력
+    tbody.innerHTML = html;
+} // func end
+
+
+
+
+// [3] 평가 등록 구역 출력함수. 실행조건 : [평가등록] 버튼을 클릭했을 때
+function 평가등록출력(클릭된사원번호){ // 매개변수
+    // console.log(클릭된사원번호);
+
+    // 1. 클릭된사원번호를 이용한 사원정보 찾기
+    let 검색사원 = null // 2. '검색사원' 변수를 선언하여 검색 결과를 저장할 변수, null이란? 객체가 없다는 뜻
+    for(let index = 0; index <= 사원목록.length -1; index++){
+        // 3. index는 0부터 사원목록의 마지막인덱스까지 1씩 증가 반복
+        let info = 사원목록[index] // 4. index번째의 사원정보(객체) 호출
+        if(info.사원번호 == 클릭된사원번호){ // 5. index번재의 사원번호가 클릭한사원번호와 같으면
+            검색사원 = info // 6. for문 밖에서 선언한 '검색사원' 변수에 찾은 객체를 대입한다
+            break; // 7. 만일 찾았으면 for문 종료
+        } // if end
+    }
+
+    if(검색사원 == null){
+        alert('사원정보가 없습니다'); // 8. 만일 검색사원의 값이 null이면 못 찾았다. 찾았다면 사원정보(객체{})
+        return; // 9. 현재 함수 종료
+    }
+
+    // 1. 어디에
+    let div = document.querySelector('.평가입력구역')
+
+
+    // 2. 무엇을
+    let html = `
+                <h3>사원 평가 등록</h3>
+                <form>
+                    <h5>사원명 : ${검색사원.사원명}</h5>
+                    평가연도 : <input class="평가연도" type="text"/>
+                    상반기평가 : <input class="상반기" type="text"/>
+                    하반기평가 : <input class="하반기" type="text"/>
+                    <button onclick='평가등록함수()' type="button">점수등록</button>
+                </form>
+                `
+
+    // 3. 출력
+    div.innerHTML = html;
+}
+
+
+
+
+
+
+
+// [4] 평가 등록 함수
+function 평가등록함수(){
+    // 1. 
+    let 평가연도 = document.querySelector('.평가연도').value 
+    let 상반기 = document.querySelector('.상반기').value
+    let 하반기 = document.querySelector('.하반기').value
+
+    let info = {
+        평가연도 : 평가연도,
+        상반기 : 상반기,
+        하반기 : 하반기
+    }
+    console.log(info);
+    //평가목록.push(info);
+
+
+
+
+}
+
+
+
+
+// [5] 사원별 평가 내역 출력 함수
+function 평가전체출력(){
+    // 1. 어디에
+    let table = document.querySelector('.사원평가목록')
+
+    for( let index = 0; index <= 사원번호.length -1; index++){
+        let info = 사원번호[index]
+        
+
+
+
+
+
+
+    }
+
+
+    let html = `
+                <thead>
+                    <tr>
+                        <th>연도</th>
+                        <th>상반기</th>
+                        <th>하반기</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2023</td>
+                        <td>100</td>
+                        <td>92</td>
+                    </tr>
+                    <tr>
+                        <td>2024</td>
+                        <td>45</td>
+                        <td>53</td>
+                    </tr>
+                    <tr>
+                        <td>2021</td>
+                        <td>72</td>
+                        <td>75</td>
+                    </tr>
+                </tbody>
+                `
+
+    // 출력
+    table.innerHTML = html;
+}

@@ -6,9 +6,9 @@
     <div>
         <h3>사원 등록</h3>
         <form>
-            사원명 : <input type="text"/>
-            생년월일 : <input type="date"/>
-            <button type="button">등록</button>
+            사원명 : <input class="name" type="text"/>
+            생년월일 : <input class="birth" type="date"/>
+            <button onclick="사원등록()" type="button">사원등록</button>
         </form>
     </div>
     <div>
@@ -16,10 +16,13 @@
         <table border="1">
             <thead>
                 <tr>
-                    <th>사원명</th> <th>생년월일</th>
+                    <th>사원번호</th>
+                    <th>사원명</th>
+                    <th>생년월일</th>
+                    <th>비고</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="사원테이블">
                 <tr>
                     <td>유재석</td>
                     <td>2000-01-01</td>
@@ -35,17 +38,10 @@
             </tbody>
         </table>
     </div>
-    <div>
-        <h3>사원 평가 등록</h3>
-        <form>
-            <h5>사원명 : 유재석</h5>
-            평가연도 : <input type="text"/>
-            상반기평가 : <input type="text"/>
-            하반기평가 : <input type="text"/>
-            <button type="button">등록</button>
-        </form>
+    <div class="평가입력구역">
+
     </div>
-    <div>
+    <div class="사원평가목록">
         <h3>사원 평가 목록</h3>
         <table border="1">
             <thead>
