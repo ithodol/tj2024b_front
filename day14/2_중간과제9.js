@@ -166,10 +166,25 @@ function searchCar() {
 }
 
 function outCar(index) {
+  let tbody = document.querySelector('#outBox');
+  let html=''
+  //tbody.innerHTML = '';
 
   carInfo.splice(index, 1);
 
-  searchCar();
+
   alert('출차가 완료되었습니다.');
   console.log(carInfo);
+  html += `<h1>출차</h1>
+  주차 위치 : <span class="carLocation"></span> <br />
+  차량 번호 : <input type="text" class="carNumber" placeholder=''> </span>
+  <hr />
+  입차 시간 : <span class="inCarTime"></span><br />
+  출차 시간 : <span class="outCarTime"></span>
+  <hr />
+  주차료(금액) : <span class="price"></span>
+  <div class="deleteBox">
+  <button onclick="outCar()" type="button">출차</button>`;
+  
+  tbody.innerHTML=html;
 }
