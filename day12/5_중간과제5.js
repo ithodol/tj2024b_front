@@ -13,7 +13,7 @@
 */
 
     let movie = ["히든페이스,8","위키드,4","글래디에이터2,7","청설,6"]
-    let html = '<table>'
+    let html = '';
     for(let index = 0; index <= movie.length- 1; index++){
         let movieName = movie[index]
 
@@ -21,10 +21,13 @@
         html += `<tr>
                     <td>${movieList[0]}</td> <td>${movieList[1]}</td>
                 </tr>`
+
         console.log(html);
     }
     
-    document.querySelector("body").innerHTML=html;
+    //document.querySelector("body").innerHTML=html;
+
+    table.innerHTML = html;    
 
 
 
