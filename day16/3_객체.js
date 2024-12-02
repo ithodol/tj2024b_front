@@ -1,14 +1,15 @@
 /*
     공공데이터 포털
         - 인천광역시 부평구 인구 현황을 출력하시오.
-
-
-
-
-
+        1. 공공데이터 포털 : 
+        2. 회원가입/로그인
+        3. '인천광역시 부평구 인구' 검색
+        4. '인천광역시 부평구_인구 현황' open API 신청
+        5. 인증키 설정
+        6. API 실행
  */
 
-
+// [1] '부평구인구정보' 객체 정보
 let 부평구인구정보 = {
     "currentCount": 23,
     "data": [
@@ -201,4 +202,37 @@ let 부평구인구정보 = {
     "page": 1,
     "perPage": 50,
     "totalCount": 23
-  }
+}
+
+console.log(부평구인구정보);
+console.log(부평구인구정보.data); // 부평구 인구 정보 자료 (객체->배열)
+  
+// [2] 
+
+// (1) 어디에 document.querySelector()
+let tbody = document.querySelector('table > tbody')
+
+// (2) 무엇을 부평구 인구정보 자료
+let html = ``
+
+for(let index = 0; index <= 부평구인구정보.data.length-1; index++){
+    // index는 0부터 부평구인구정보의 마지막인덱스까지 1씩 증가 반복
+    let info = 부평구인구정보.data[index]
+    // index번째의 인구정보 호출
+    // console.log(info);
+    // 인구정보 자료를 html로 구성하기
+    //  - 속성명 호출시 속성명에 특수문자가 포함된 경우
+    //      1. 변수명["속성명"]
+    //      2. 변수명.속성명
+    html += `<tr>
+                <td>${info.동별}</td>
+                <td>${info.세대수}</td>
+                <td>${info["인구수(계)"]}</td>
+                <td>${info["인구수(남)"]}</td>
+                <td>${info["인구수(여)"]}</td>
+            </tr>`
+}
+
+
+// (3) 출력 innerHTML
+tbody.innerHTML = html;
