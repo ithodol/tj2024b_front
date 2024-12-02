@@ -92,20 +92,23 @@
         <label for="carNumber">차량번호</label>
         <input id="carNumber" type="text" class="carNum" />
         <button onclick="inCar()" type="button">등록</button>
-        <hr/>
-      </div>
-    <div>
-        <h1> 출차 </h1>
-        주차 위치 : <span class="carLocation" >  </span> <br/>
-        차량 번호 : <span class="carNumber">  </span> <br/>
-        입차 시간 : <span class="inCarTime"> </span> 
-        출차 시간 : <span class="outCarTime">  </span> <br/>
-        주차료(금액) : <span class ="price"></span> 
-                        
-        <div class="deleteBox">
-            <button onclick="삭제함수()" type="button">출차</button>
+        <hr />
+        <div id ='outBox'>
+            <h1> 출차 </h1>
+            주차 위치 : <span class="carLocation"></span> <br />
+            차량 번호 : <input type="text" class="carNumber"></span>
+            <button type ="button" onclick="searchCar()" class = "searchBox">조회</button>
+            <hr />
+            입차 시간 : <span class="inCarTime"> </span>
+            출차 시간 : <span class="outCarTime"> </span>
+            <hr />
+            주차료(금액) : <span class="price"></span>
+    
+            <div class="deleteBox">
+                <button onclick="outCar()" type="button">출차</button>
+            </div>
         </div>
-    </div>
+    
 
 
     <script src='2_중간과제9.js'></script>
