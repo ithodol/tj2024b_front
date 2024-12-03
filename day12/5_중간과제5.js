@@ -12,22 +12,24 @@
     
 */
 
-    let movie = ["히든페이스,8","위키드,4","글래디에이터2,7","청설,6"]
-    let html = '';
-    for(let index = 0; index <= movie.length- 1; index++){
-        let movieName = movie[index]
+let movieNames = ['히든페이스', '위키드', '글래디에이터2', '청설']
+let movieRating = [ 8, 4, 7, 6]
 
-        let movieList = movieName.split(',')
-        html += `<tr>
-                    <td>${movieList[0]}</td> <td>${movieList[1]}</td>
-                </tr>`
+let html = ''
+for(let index = 0; index <= movieNames.length -1; index++){
 
-        console.log(html);
+    html += `<div>${movieNames[index]}`
+
+    let ratinghtml = ''
+    for(let rating = 1; rating <= 10; rating++){
+        if(rating <= movieRating[index]){html += `★`}
+        else{ratinghtml += `☆`}
     }
-    
-    //document.querySelector("body").innerHTML=html;
 
-    table.innerHTML = html;    
+    html += `${ratinghtml}</div>`
+
+}
+document.write(html);
 
 
 
@@ -35,12 +37,29 @@
 
 
 /*
-    [문제2] 6개의 시트/좌석이 존재하는 좌석 상태 출력하기
-    1. 좌석은 총 6개 / 빈좌석인지 예약석인지는 임의로 구성
-    2. 아래와 같이 좌석을 출력한다.
-    3. 빈좌석이면 blue 색상표기, 예약석이면 red로 색상표기
-    4. HTML 예시
-        ㅁ  ㅁ
-        ㅁ  ㅁ
-        ㅁ  ㅁ
+[문제2] 6개의 시트/좌석이 존재하는 좌석 상태 출력하기
+1. 좌석은 총 6개 / 빈좌석인지 예약석인지는 임의로 구성
+2. 아래와 같이 좌석을 출력한다.
+3. 빈좌석이면 blue 색상표기, 예약석이면 red로 색상표기
+4. HTML 예시
+    ㅁ  ㅁ
+    ㅁ  ㅁ
+    ㅁ  ㅁ
 */
+
+
+let 좌석 = [1,0,
+            1,0,
+            1,0]
+
+let outhtml = `<div>`
+
+for(let index = 0; index <= 좌석.length -1; index++){
+    if(좌석[index] == 0) {
+        outhtml += `<span style="color:blue">빈좌석<br/></span>`
+    }else{
+        outhtml += `<span style="color:red">예약석</span>`
+    }
+}
+outhtml += `</div>`
+document.write(outhtml);
