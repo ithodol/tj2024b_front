@@ -6,3 +6,32 @@
     [제출]
     강의 카카오톡방에 ip 링크 제출
 */
+
+
+let join = []
+
+
+function 등록함수(){
+    let joinId = document.querySelector('.joinId').value
+    let joinPw = document.querySelector('.joinPw').value
+
+    let joinArray = `${joinId},${joinPw}`
+    //console.log(joinArray);
+
+    join.push(joinArray);
+    console.log('회원가입완료');
+}
+
+function 출력함수(){
+    let loginId = document.querySelector('.loginId').value
+    let loginPw = document.querySelector('.loginPw').value
+
+    let loginArray = `${loginId},${loginPw}`
+    //console.log(loginArray);
+
+    for(let index = 0; index <= join.length -1; index++){
+
+        if(join[index] == loginArray){console.log('로그인성공');}
+        else{console.log('로그인실패');}
+    }
+}
