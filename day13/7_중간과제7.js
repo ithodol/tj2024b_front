@@ -15,8 +15,8 @@ function 등록함수(){
     let joinId = document.querySelector('.joinId').value
     let joinPw = document.querySelector('.joinPw').value
 
-    let joinArray = `${joinId},${joinPw}`
-    //console.log(joinArray);
+    let joinArray = `아이디:${joinId}, 비밀번호:${joinPw}`
+    console.log(joinArray);
 
     join.push(joinArray);
     console.log('회원가입완료');
@@ -27,11 +27,13 @@ function 출력함수(){
     let loginPw = document.querySelector('.loginPw').value
 
     let loginArray = `${loginId},${loginPw}`
-    //console.log(loginArray);
+    console.log(loginArray);
 
     for(let index = 0; index <= join.length -1; index++){
 
-        if(join[index] == loginArray){console.log('로그인성공');}
+        if(join == loginArray[index]){console.log('로그인성공');}
         else{console.log('로그인실패');}
     }
 }
+
+// 회원가입 자료가 덮어쓰기 됨
