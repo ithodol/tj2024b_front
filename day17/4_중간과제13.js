@@ -54,7 +54,7 @@ function 전체출력함수(){
             html += `<div class="contentBox ${info.할일상태 ? 'success' : ''}">
                         <div class="content">${info.할일내용}</div>
                         <div class="contentBtns">
-                            <button onclick="수정함수(${info.할일코드})"class="updateBtn" type="button">수정</button>
+                            <button onclick="수정함수(${info.할일코드})" class="updateBtn" type="button">수정</button>
                             <button onclick="삭제함수(${info.할일코드})" class="deleteBtn" type="button">삭제</button>
                         </div>
                     </div>`
@@ -70,8 +70,21 @@ function 전체출력함수(){
 
 
 // [4] 수정함수 (p:할일코드 , r:x)
-function 수정함수(){
-    
+function 수정함수(수정할일코드){
+    // 1. 배열내 삭제할 요소(객체)를 찾기
+    for(let index = 0; index <= 할일목록.length -1; index++){
+        if(할일목록[index].할일코드 == 수정할일코드){
+            // 만약 index번째의 할일객체내 할일코드가 수정할일코드와 같다면
+            // let 할일상태 = 할일목록[index].할일상태 // 할일상태를 호출 , 할일상태를 부정 후 다시 할일상태에 대입
+            할일목록[index].할일상태 = !할일목록[index].할일상태
+                // 실행순서 (1) 할일목록[index].할일상태 => true/false
+                //          (2) 부정연산자 !true/false
+                //          (3) 할일목록[index].할일상태 => true/false
+                break; // 수정했다면 다음 객체는 조회할 필요없이 반복문 종료
+        }
+    }
+
+
 
 
     전체출력함수();
