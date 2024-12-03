@@ -1,17 +1,48 @@
 <!-- 
     TODOLIST 구현하기
+
+    **개발순서**
+        1. 구현할 화면을 스케치(프로토타입) 작성
+        2. 구성한 화면을 HTML과 CSS로 샘플 작성
 -->
 
 
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="4_중간과제13.css">
+    <script src='4_중간과제13.js'></script>
 </head>
 <body>
+    <div id="wrap">
+        <h1 class="title">나만의 할 일 목록</h1>
 
 
+        <div id="todoTop">
+            <input class="contentInput" type="text"/>
+            <button class="addBtn" type="button">등록</button>
+        </div> <!-- todoTop end -->
 
-    <script src='4_중간과제13.js'></script>
+
+        <div id="todoBottom">
+            <div class="contentBox">
+                <div class="content">1교시 수업 듣기</div>
+                <div class="contentBtns">
+                    <button class="updateBtn" type="button">수정</button>
+                    <button class="deleteBtn" type="button">삭제</button>
+                </div>
+            </div>
+            <div class="contentBox success">
+                <div class="content">밥먹기</div>
+                <div class="contentBtns">
+                    <button class="updateBtn" type="button">수정</button>
+                    <button class="deleteBtn" type="button">삭제</button>
+                </div>
+            </div>
+
+        </div> <!-- todoBottom end -->
+    </div>
+
 
 </body>
 </html>

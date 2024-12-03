@@ -1,0 +1,46 @@
+ /* 전체 구역 */
+#wrap{
+    width: 400px;
+    margin: 0 auto;
+}
+/* 상단 */
+#todoTop{
+    display: flex;
+}
+
+
+/* 하단 */
+/* 입력상자 */
+.contentInput{
+    width: 300px;
+    padding: 10px;
+    border: none;
+    box-shadow: 0px 0px 5px green;
+}
+
+/* 등록버튼 */
+.addBtn{
+    width: 100px;
+    padding: 15px;
+    border: none;
+    box-shadow: 0px 0px 5px green;
+}
+
+/* 할 일 1개 , 할 일이 미완료 일 때 */
+.contentBox{
+    display: flex;
+    justify-content: space-between; /* 가로 정렬 */
+    align-items: center; /* 세로 정렬 */
+    background-color: orange;
+    margin: 20px 0px;
+    padding: 15px 10px;
+}
+
+/* 할 일이 완료일 때 내용구역에 취소선 */
+.success{
+    background-color: gray;
+    color: #ffff;
+}
+.success > .content{
+    text-decoration: line-through;
+}
