@@ -15,7 +15,7 @@
     width: 300px;
     padding: 10px;
     border: none;
-    box-shadow: 0px 0px 5px green;
+    box-shadow: 0px 0px 5px #ff6600;
 }
 
 /* 등록버튼 */
@@ -23,7 +23,7 @@
     width: 100px;
     padding: 15px;
     border: none;
-    box-shadow: 0px 0px 5px green;
+    box-shadow: 0px 0px 5px #ff6600;
 }
 
 /* 할 일 1개 , 할 일이 미완료 일 때 */
@@ -31,16 +31,21 @@
     display: flex;
     justify-content: space-between; /* 가로 정렬 */
     align-items: center; /* 세로 정렬 */
-    background-color: orange;
+    background-color: #ff6600;
     margin: 20px 0px;
     padding: 15px 10px;
 }
 
 /* 할 일이 완료일 때 내용구역에 취소선 */
 .success{
-    background-color: gray;
-    color: #ffff;
+    background-color: #f0f0f0;
+    color: darkgray;
 }
 .success > .content{
     text-decoration: line-through;
+}
+.success > .contentBtns > button{
+    background-color: #f0f0f0;
+    color: gray;
+    border: 1px solid darkgray
 }
