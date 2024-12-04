@@ -18,7 +18,7 @@ let month = today.getMonth()+1; // 오늘의 월, +1 하는 이유 = 12월이 11
 let contentArray = [
     { cno : 1, content : '종수네 차짬먹기', date : '2024-12-4', color : 'pink' },
     { cno : 2, content : '풍향고 보기', date : '2024-12-10', color : 'orange' },
-    { cno : 3, content : '칼바람 양학하기', date : '2024-12-10', color : 'green' },
+    { cno : 3, content : '칼바람 양학하기', date : '2024-12-10', color : 'lightgreen' },
     { cno : 4, content : '귀칼 풍뢰 뽑기', date : '2024-12-21', color : 'skyblue' },
     { cno : 5, content : '귀칼 영웅 렙업하기', date : '2024-12-23', color : 'lawngreen' }
 ]
@@ -40,29 +40,28 @@ function calPrint(){
         // 출력
         h3.innerHTML = html;
 
-
-
     // (2) 하단의 현재 연도/월의 일 표시
-    // 어디에
-    let calBottom = document.querySelector('#calBottom')
-    // 무엇을
-    let html2 = ``;
-
-    // - 요일 출력
-    html2 += `<div class="week sunday">일</div><div class="week">월</div class="week"><div class="week">화</div><div class="week">수</div><div class="week">목</div><div class="week">금</div><div class="week saturday">토</div>`
-
-    // - 1일부터 마지막 일까지 출력
-        // (1) 현재 날짜의 마지막 일 구하기. 달력은 1일부터 마지막 일까지 출력하기 위해서
-        let date = new Date(year, month, 0); // 지정한 연도와 월에 해당하는 전 달의 말일 날짜를 구할 수 있음 // Tue Dec 31 2024
-            //console.log(date); 
-        let endDay = date.getDate(); // 31
-            //console.log(endDay); 
+        // 어디에
+        let calBottom = document.querySelector('#calBottom')
         
-        // (2) 현재 날짜의 1일의 요일 구하기. 1일의 시작 위치를 찾기 위해서 
-        let date2 = new Date(year, month-1, 1); // -1을 하는 이유 : 컴퓨터는 0:1월로 인식
-            //console.log(date2); // Sun Dec 01 2024
-        let startWeek = date2.getDay(); // 요일. 0:일
-            //console.log(startWeek);
+        // 무엇을
+        let html2 = ``;
+
+        // - 요일 출력
+        html2 += `<div class="week sunday">일</div><div class="week">월</div class="week"><div class="week">화</div><div class="week">수</div><div class="week">목</div><div class="week">금</div><div class="week saturday">토</div>`
+
+        // - 1일부터 마지막 일까지 출력
+            // (1) 현재 날짜의 마지막 일 구하기. 달력은 1일부터 마지막 일까지 출력하기 위해서
+            let date = new Date(year, month, 0); // 지정한 연도와 월에 해당하는 전 달의 말일 날짜를 구할 수 있음 // Tue Dec 31 2024
+                //console.log(date); 
+            let endDay = date.getDate(); // 31
+                //console.log(endDay); 
+            
+            // (2) 현재 날짜의 1일의 요일 구하기. 1일의 시작 위치를 찾기 위해서 
+            let date2 = new Date(year, month-1, 1); // -1을 하는 이유 : 컴퓨터는 0:1월로 인식
+                //console.log(date2); // Sun Dec 01 2024
+            let startWeek = date2.getDay(); // 요일. 0:일
+                //console.log(startWeek);
 
 
     // + 각 월의 1일 전까지의 공백 출력
@@ -89,10 +88,7 @@ function calPrint(){
                 if(plan.date == date3){ // 만약 index번째의 일정객체내 일정이 현재 보고있는 날짜와 같으면                    
                     planHTML += `<div style="background-color : ${plan.color} "> ${plan.content} </div>`
                 } // if end
-
-
             } // for end
-
 
 
         // 일 출력
@@ -124,7 +120,6 @@ function monthChange( changeMonth ){ // 함수의 매개변수 : 이전달/다�
     if(month > 12){ // 만약에 월이 12보다 초과이면 연도를 증가(1)시킨다
         year ++; month = 1;
     }
-
 
     // 날짜 변화에 따른 새로고침(출력함수 재실행)
     calPrint();

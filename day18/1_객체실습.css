@@ -33,7 +33,7 @@
     
 }
 #calBottom > div{
-    width: 14%; /* 부모요소의 가로사이즈가 100%의 7등분 */
+    width: 167px; /* 부모요소의 가로사이즈가 100%의 7등분 */
     border: 1px solid #eeeeee;
     height: 100px;
 
