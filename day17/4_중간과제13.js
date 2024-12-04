@@ -81,16 +81,13 @@ function 수정함수(수정할일코드){
                 //          (2) 부정연산자 !true/false
                 //          (3) 할일목록[index].할일상태 => true/false
                 break; // 수정했다면 다음 객체는 조회할 필요없이 반복문 종료
-        }
-    }
-
-
-
+        } // if end
+    } // for end
 
     전체출력함수();
     return;
 
-}
+} // func end
 
 
 
