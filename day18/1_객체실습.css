@@ -1,3 +1,10 @@
+/* 전체 구역 */
+#wrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
 /* 달력 상단 구역 */
 #calTop{
     display: flex;
