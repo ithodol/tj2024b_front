@@ -33,12 +33,82 @@
     <link rel='stylesheet' type='text/css' media='screen' href='2_중간과제14.css'>
 </head>
 <body>
+    <div id="wrap">
+        <div id="newBook">
+            <h1>도서등록</h1>
+            도서명 <input id="bookName" type="text" /><br/>
+            출판사 <input id="bookCom" type="text" /><br/>
+            저자 <input id="bookWri" type="text" /> <br/>
+            <button onclick="도서등록()" type="button">등록</button>
+        </div>
 
-    
+        <hr>
+
+        <div id="bookList">
+            <h3>도서목록</h3>
+            <table border="1">
+                <thead>
+                    <tr><th>도서명</th><th>저자</th><th>출판사</th><th>수정 / 삭제</th></tr>
+                </thead>
+                <tbody class="도서테이블">
+                    <tr><td>소년이 온다</td><td>한강</td><td>창비</td><td><button onclick="도서수정()">수정</button><button onclick="도서삭제()">삭제</button></td></tr>
+                    <tr><td>파과 </td><td>구병모 </td><td>위즈덤하우스 </td><td><button onclick="도서수정()">수정</button><button onclick="도서삭제()">삭제</button></td></tr>
+                    <tr><td>종의 기원</td><td>정유정 </td><td>은행나무</td><td><button onclick="도서수정()">수정</button><button onclick="도서삭제()">삭제</button></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <hr>
 
 
+        <div id="도서수정">
+            <!-- <h3>도서수정</h3>
+            <form>
+                <h5>수정도서명 : ${도서목록.도서번호}</h5>
+                도서명 : <input type="text"/>
+                출판사 : <input type="text"/>
+                저자 : <input type="text"/>
+                <button type="button" onclick="도서수정()">수정</button>
+            </form> -->
+        </div>
 
-    
+        <div id="newInven">
+            <h1>재고등록</h1>
+            도서번호 <input id="bookNum" type="text" /><br/>
+            도서개수 <input id="bookCount" type="text" /><br/>
+            입고날짜 <input id="bookDay" type="text" /> <br/>
+            <button onclick="재고등록()" type="button">등록</button>
+        </div>
+
+        <hr>
+
+        <div id="invenList">
+            <h3>재고목록</h3>
+            <table border="1">
+                <thead>
+                    <tr><th>도서번호</th><th>도서개수</th><th>입고날짜</th><th>수정/삭제</th></tr>
+                </thead>
+                <tbody class="재고테이블">
+                    <tr><td>1</td><td>1</td><td>2024-05-12</td><td><button onclick="재고수정()">수정</button><button onclick="재고삭제()">삭제</button></td></tr>
+                    <tr><td>2</td><td>2</td><td>2024-04-12</td><td><button onclick="재고수정()">수정</button><button onclick="재고삭제()">삭제</button></td></tr>
+                    <tr><td>3</td><td>3</td><td>2024-03-12</td><td><button onclick="재고수정()">수정</button><button onclick="재고삭제()">삭제</button></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="재고수정">
+            <!-- <h3>재고수정</h3>
+            <form>
+                <h5>수정도서명 : ${도서목록.도서번호}</h5>
+                도서명 : <input type="text"/>
+                출판사 : <input type="text"/>
+                저자 : <input type="text"/>
+                <button type="button" onclick="도서수정()">수정</button>
+            </form> -->
+        </div>
+
+    </div> <!-- wrap end -->
+
     <script src='2_중간과제14.js'></script>
 
 </body>

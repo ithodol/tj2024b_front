@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+font-family: 'S-CoreDream-3Light';
+
+}
+
+/* 전체 div 박스 */
+#wrap{
+    width: 600px;
+    margin: 0 auto;
+}
+
+
+
+/* 구분선 */
+hr{
+    margin-top: 50px;
+}
+
+
+
+/* 도서등록 */
+#newBook > input {
+    margin: 5px;
+}
+
+#newBook > button{
+    background-color: black;
+    color: #ffff;
+    border: 3px solid black;
+    margin-left : 165px;
+    margin-top: 10px;
+}
+
+#newBook > #bookWri{
+    margin-left: 20px;
+}
+
+
+
+
+/* 도서목록 */
+#bookList table > thead > tr > th {
+    width: 140px;
+    height: 30px;
+    background-color: black;
+    color: #ffff;
+}
+
+#bookList table > tbody > tr > td{
+    text-align: center;
+}
+
+#bookList table > tbody > tr > td > button{
+    margin: 5px;
+}
+
+
+/* 재고등록 */
+#newInven > input {
+    margin: 5px;
+}
+
+#newInven > button{
+    background-color: black;
+    color: #ffff;
+    border: 3px solid black;
+    margin-left : 182px;
+    margin-top: 10px;
+}
+
+
+
+
+/* 재고목록 */
+#invenList table > thead > tr > th {
+    width: 140px;
+    height: 30px;
+    background-color: black;
+    color: #ffff;
+}
+
+#invenList table > tbody > tr > td{
+    text-align: center;
+}
+
+#invenList table > tbody > tr > td > button{
+    margin: 5px;
+}
+
+
+
+
