@@ -1,0 +1,58 @@
+/* 전체구역 */
+#wrap{
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/* 상단구역 */
+#top{
+    margin-bottom: 30px;
+}
+#top > .topCont > h1{
+    margin-bottom: 40px;
+}
+#top > .topCont > .topInput, #top > .topCont > button{
+    width: 230px;
+    height: 30px;
+    border: none;
+    box-shadow: 0px 0px 5px black;
+}
+#top > .topCont > button{
+    width: 60px;
+    background-color: black;
+    color: #fff;
+    height: 32px;
+}
+
+
+
+
+/* 하단구역 */
+#bottom{
+    width: 300px;
+    margin: 0 auto;
+}
+#bottom > .contBox{
+    background-color: black;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+
+/* 할일 완료 */
+#bottom > .success {
+    background-color: #f0f0f0;
+    color: darkgray;
+}
+#bottom > .success > .cont{
+    text-decoration: line-through;
+}
+#bottom > .success > .contBtn > button{
+    border: 1px solid darkgray;
+    color: darkgray;
+}
