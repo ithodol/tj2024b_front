@@ -28,13 +28,27 @@ let eno = 4;
             출판사 : bookWri
         }
         //console.log(info);
-        도서목록.push(info);
+
+
 
         // 출력
-        eno++;
-        alert('도서 등록완료');
+        if( bookName == "" || bookCom == "" || bookWri == "" ){
+            alert('내용을 입력하세요');
+            document.querySelector('#bookName').value = ``;
+            document.querySelector('#bookCom').value = ``;
+            document.querySelector('#bookWri').value = ``;
+            return;
+        }else{
+            alert('도서 등록완료');
+            eno++;
+        }
+
+
+        도서목록.push(info);
 
         도서출력();
+
+
     }
 
 
@@ -51,17 +65,17 @@ let eno = 4;
         // 무엇을
         for(let index = 0; index <= 도서목록.length -1; index++){
             let info = 도서목록[index]
+            
             html +=  `
                     <tr>
                         <td>${info.도서명}</td> <td>${info.저자}</td> <td>${info.출판사}</td>
                         <td>
-                            <button onclick="도서수정()">수정</button>
-                            <button onclick="도서삭제()">삭제</button>
+                            <button onclick="도서수정(${info.도서번호})">수정</button>
+                            <button onclick="도서삭제(${info.도서번호})">삭제</button>
                         </td>
                     </tr>
             `
         }
-
         // 출력
         tbody.innerHTML = html;
 
@@ -73,25 +87,65 @@ let eno = 4;
 
     // 수정함수
         // (1) 수정 등록
-        function 도서수정(도서수정코드){ // 매개변수 실행하려면 어디에 어떻게 넣어야 함? day16 객체활용 참고
-            for(index = 0; index <= 도서목록.length-1; index++){
-                if(도서목록[index] == 도서수정코드){
-                    도서목록[idnex]
+        function 도서수정(도서수정버튼){ 
+        //console.log(도서수정버튼);
+            let 클릭도서 = null
+            for( let index = 0; index <= 도서목록.length-1; index++){
+                let info = 도서목록[index]
+                //console.log(info);
+                if(info.도서번호 == 도서수정버튼){
+                    클릭도서 = info;
+                    break;
                 }
             }
+            if(클릭도서 == null){
+                alert('도서 정보 없음');
+            }
+            
+            // 어디에
+            let div = document.querySelector('#도서수정')
 
+            // 무엇을
+            let html = `
+                    <h3>도서수정</h3>
+                    <form>
+                        <h5>도서번호 :  ${클릭도서.도서번호}</h5>
+                        도서명 <input type="text" style="margin: 5px;"/> <br/>
+                        출판사 <input type="text" style="margin: 5px;"/> <br/>
+                        저자 <input type="text" style="margin: 5px; margin-left: 20px;" /> <br/>
+                        <button type="button" onclick="도서수정()" style="margin-top: 10px; margin-left : 165px;">수정</button>
+                        <hr/>
+                    </form>
+                    `
+
+            // 출력
+            div.innerHTML = html;
+
+            도서출력();
+            return;
         }
 
         // (2) 수정 출력
 
 
-
-
-
-
-    // 삭제함수
-    function 도서삭제(){
         
+
+
+
+
+
+
+    // 삭제함수 p:도서번호
+    function 도서삭제(삭제도서목록){
+        for( let index = 0; index <= 도서목록.length -1; index++){
+            if(도서목록[index].도서번호 == 삭제도서목록){
+                도서목록.splice(index , 1) 
+                break;
+            }
+        }
+        //console.log(도서목록);
+        도서출력();
+        return;
     }
 
 
@@ -102,7 +156,7 @@ let eno = 4;
 
 
 
-
+let eno2 = 4;
 // 재고함수
     // 등록함수
     function 재고등록(){
@@ -114,16 +168,28 @@ let eno = 4;
 
         // 처리
         let info = {
-            도서번호 : bookNum,
+            도서번호 : eno2,
             도서개수 : bookCount,
             입고날짜 : bookDay
         }
-        재고목록.push(info);
         //console.log(재고목록);
 
-        // 출력
 
-        alert('재고 등록완료')
+        // 출력
+        if( bookNum == "" || bookCount == "" || bookDay == "" ){
+            alert('내용을 입력하세요');
+            document.querySelector('#bookNum').value = ``;
+            document.querySelector('#bookCount').value = ``;
+            document.querySelector('#bookDay').value = ``;
+            return;
+        }else{
+            alert('재고 등록완료');
+            eno2++;
+        }
+
+        재고목록.push(info);
+
+
         재고출력();
     }
 
@@ -138,42 +204,71 @@ let eno = 4;
         // 무엇을
         for(let index = 0; index <= 재고목록.length -1; index++){
             let info = 재고목록[index]
-
+            console.log(info);
             html += `
                     <tr> 
                         <td>${info.도서번호}</td> <td>${info.도서개수}</td> <td>${info.입고날짜}</td>
                         <td>
-                            <button onclick="재고수정()">수정</button>
-                            <button onclick="재고삭제()">삭제</button>
+                            <button onclick="재고수정(${info.도서번호})">수정</button>
+                            <button onclick="재고삭제(${info.도서번호})">삭제</button>
                         </td>
                     </tr>
-            `// 도서목록에 있는 도서번호를 갖고 오고 싶음
-
-
+            `
         }
-
-
-
-
         // 출력
         tbody.innerHTML = html;
-
     }
 
 
 
 
     // 수정함수
-    function 재고수정(){
-        
+    function 재고수정(재고수정버튼){
+        let 클릭재고 = null
+        for( let index = 0; index <= 재고목록.length -1; index++){
+            let info = 재고목록[index]
+            console.log(info);
+            if(info.도서번호 == 재고수정버튼){
+                클릭재고 = info;
+                break;
+            }
+        }
+        if(클릭재고 == null){
+            alert('도서 정보 없음');
+        }
+        // 어디에
+        let div = document.querySelector('#재고수정')
+
+        // 무엇을
+        let html = `
+                <h3>재고수정</h3>
+                <form>
+                    <h5>도서번호 : ${클릭재고.도서번호}</h5> 
+                    도서번호 : <input type="text" style="margin: 5px;"/> <br/>
+                    도서개수 : <input type="text" style="margin: 5px;"/> <br/>
+                    입고날짜 : <input type="text" style="margin: 5px;"/> <br/>
+                    <button type="button" onclick="도서수정()" style="margin-top: 10px; margin-left : 190px;">수정</button>
+                </form>
+        `
+
+        // 출력
+        div.innerHTML = html;
+
+        재고출력();
+        return;
     }
 
 
 
     // 삭제함수
-    function 재고삭제(){
-        
+    function 재고삭제(삭제재고목록){
+        for( let index = 0; index <= 재고목록.length-1; index++){
+            if(재고목록[index].도서번호 == 삭제재고목록){
+                재고목록.splice(index, 1);
+                break;
+            }
+        }
+        재고출력();
     }
-
 
 
