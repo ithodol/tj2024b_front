@@ -1,0 +1,60 @@
+
+/* 전체구역 */
+#wrap{
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/* 상단구역 */
+#top{
+    width: 500px;
+    height: 120px;    
+}
+
+#top > input{
+    height: 35px;
+    width: 230px;
+    border: none;
+    box-shadow: 0px 0px 5px black;
+}
+#top > button{
+    width: 60px;
+    height: 37px;
+    border: none;
+    box-shadow: 0px 0px 5px black;
+    background-color: black;
+    color: #fff;
+}
+
+
+
+/* 하단구역 */
+#bottom{
+    width: 300px;
+    margin: 0 auto;
+    
+}
+#bottom > .contentBox{
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: black;
+    color: #fff;
+}
+
+#bottom > .success{
+    background-color: #f0f0f0;
+    color: darkgray;
+}
+#bottom > .success > .content {
+    text-decoration: line-through;
+}
+#bottom > .success > .contentBtn > button {
+    color: darkgray;
+    border: 1px solid darkgray;
+}
