@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel='stylesheet' type='text/css' media='screen' href='4_시험선택2.css'>
+</head>
+<body>
+
+    <div id="wrap">
+        <div id="join">
+            <h1>회원가입</h1>
+            아이디 <input type="text" class="joinId"/> <br/>
+            비밀번호 <input type="password" class="joinPw"/> <br/>
+            <button type="button">회원가입</button>
+        </div>
+
+        <hr/>
+
+        <div id="login">
+            <h1>로그인</h1>
+            아이디 <input type="text" class="loginId"/><br/>
+            비밀번호 <input type="password" class="loginPw"/><br/>
+            <button type="button">로그인</button>
+        </div>
+
+        <hr/>
+
+        <div id="postWrite">
+            <h1>게시물 쓰기</h1>
+            제목 <input type="text" class="writeTit"/><br/>
+            <div class="wc">
+                내용 <textarea class="writeCont" cols="48" rows="5" placeholder="내용 작성"></textarea>
+            </div> <br/>
+            <div class="pw">
+                비밀번호 <input type="password" class="writePw"/>
+            </div> <br/>
+            <button type="button">등록</button>
+        </div>
+
+        <hr/>
+
+        <div id="postList">
+            <h1>게시물 목록</h1>
+            <table border="1">
+                <thead>
+                    <tr><th class="dateTh">작성일</th><th>제목</th><th class="viewTh">조회수</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>2024-12-05</td> <td>안녕하세요</td> <td>3</td></tr>
+                    <tr><td>2024-11-06</td> <td>반갑습니다</td> <td>2</td></tr>
+                    <tr><td>2024-10-07</td> <td>환영합니다</td> <td>1</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <hr/>
+
+        <div id="post">
+            <h1>게시물 상세</h1>
+            <div class="postTit">
+                <div>제목</div> <span>안녕하세요</span>
+            </div> <br/>
+            <div class="postCont">
+                <div>내용</div> <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab fugit ratione nihil dolore quod sapiente tempore ut odio ipsa quae! Modi distinctio tempora asperiores molestiae necessitatibus id laudantium voluptatem in.</span>
+            </div> <br/>
+            <div>작성일 <span>2024-12-06</span></div> <br/>
+            <div>조회수 <span>5</span></div> <br/>
+            <button type="button">수정</button>
+        </div>
+
+
+    </div>
+
+    
+
+
+
+    <script src='4_시험선택2.js'></script>
+
+</body>
+</html>

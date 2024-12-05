@@ -1,0 +1,124 @@
+
+/* 전체구역 */
+#wrap{
+    width: 400px;
+    margin: 0 auto;
+    padding: 50px 0px;
+}
+hr{
+    margin-top: 30px;
+}
+
+/* 회원가입, 로그인 */
+#join > input, #login > .loginId{
+    margin-left: 20px;
+}
+#join > input, #login > input{
+    margin-bottom: 5px;
+}
+
+#join > .joinPw, #login > .loginPw{
+    margin-left: 5px;
+}
+
+#join > button{
+    margin-top: 10px;
+    margin-left: 180px;
+    background-color: black;
+    border: 3px solid black;
+    color: #fff;
+}
+#login > button{
+    margin-top: 10px;
+    margin-left: 195px;
+    background-color: black;
+    border: 3px solid black;
+    color: #fff;
+}
+
+
+
+/* 게시물 쓰기 */
+#postWrite > input, #postWrite > div > textarea{
+    margin-bottom:5px;
+}
+#postWrite > .writeTit{
+    margin-left: 4px;
+}
+
+#postWrite > .wc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#postWrite > .pw{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.writePw{
+    margin-left: 5px;
+
+}
+
+#postWrite > button{
+    margin-left: 355px;
+    background-color: black;
+    border: 3px solid black;
+    color: #fff;
+}
+
+
+/* 게시물 목록 */
+#postList > table{
+    width: 400px;
+}
+.dateTh{
+    width: 84px;
+}
+.viewTh{
+    width: 50px;
+}
+#postList > table > thead{
+    background-color: black;
+    color: #fff;
+    height: 40px;
+}
+#postList > table > tbody > tr{
+    height: 30px;
+}
+
+
+
+/* 게시물 상세 */
+#post > div{
+    font-weight: bold;
+}
+#post > .postTit > div {
+    width: 55px;
+}
+
+#post > .postCont > div{
+    width: 280px;
+}
+
+#post > div > span{
+    font-weight: 400;
+    margin-left: 30px;
+}
+
+#post > .postCont{
+    display: flex;
+    height: 150px;
+}
+#post > .postTit{
+    display: flex;
+}
+
+#post > button{
+    background-color: black;
+    border: 3px solid black;
+    color: #fff;
+    margin-left: 355px;
+}
