@@ -29,3 +29,23 @@
         [ git user.email 설정] git config --global user.email git아이디@이메일포함 
     9. [vscode 왼쪽 메뉴] 에 [소스 제어]탭 클릭 -> [메시지 입력칸 = 기록 메시지 ]
     10. [ 커밋 및 푸시  ]
+
+
+[ GIT PAGE ] 간단한 페이지(HTML/CSS/JS) 배포 , 포트폴리오(프론트엔드 개발자)
+    - git 에서 코드 저장소(리포지토리)의 코드를 호스팅 할수 있는 기능 
+    1. 호스팅할 저장소의  메인페이지 파일명을 'index.html' 
+    2. 본인 github 홈페이지 접속 
+    3. [ new ] 또는 [ new repository ]
+    4. Create a new repository
+        - Repository name : (임의로 아무거나) tolist
+        - Public
+            [ create repository ]
+    5. 빈 리포지토리에 화면 가운데 'uploading an existing file' 클릭 
+    6. 'index.html' 파일을 드래그 해서 업로드 , css/js 와 또 다른 html 포함 가능
+        -> index.html 파일은 리포지토리에 최상위 경로에 있어여한다.
+        [ commit change ]
+    6. 리포지토리 상단 메뉴에 [ settings ] 클릭 
+    7. 왼쪽 사이드 메뉴에 [Pages] 클릭 
+    8. [Branch] 항목에서 
+        [None] ---> [main]으로 변경후 [/root] [save]클릭 
+    9. 1~2분 기다리기 : 새로고침F5 -> Your site is live at https://xxxxx.github.io/xxxx
