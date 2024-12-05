@@ -1,0 +1,47 @@
+#wrap{
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+#top{
+    margin-bottom: 30px;
+}
+
+#top > input, #top > button{
+    height: 30px;
+    border: none;
+    box-shadow: 0px 0px 5px burlywood;
+}
+
+
+
+
+
+#bottom{
+    width: 220px;
+    margin: 0 auto;
+}
+
+#bottom > .contBox{
+    display: flex;
+    justify-content: space-between;
+    background-color: burlywood;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+
+#bottom > .success{
+    background-color: #f0f0f0;
+    color: darkgray;
+}
+
+#bottom > .success > .cont {
+    text-decoration: line-through;
+
+}
+#bottom > .success > .contBtn > button{
+    background-color: #f0f0f0;
+    border: 1px solid darkgray;
+    color: darkgray;
+}
