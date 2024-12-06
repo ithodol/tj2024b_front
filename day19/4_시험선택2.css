@@ -70,6 +70,8 @@ hr{
 }
 
 
+
+
 /* 게시물 목록 */
 #postList > table{
     width: 400px;
@@ -87,6 +89,7 @@ hr{
 }
 #postList > table > tbody > tr{
     height: 30px;
+    text-align: center;
 }
 
 
