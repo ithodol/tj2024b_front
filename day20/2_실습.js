@@ -18,21 +18,12 @@ function 회원가입함수(){
     // 2. 처리
     let member = { 'id' : id, 'pw' : pw };  // 입력받은 값으로 객체 생성
 
-        // * 회원목록 정보를 전역변수에 선언하지 않고 세션/쿠키에 저장
-        //   이유 : JS 외부(브라우저)에 저장하면 새로고침되거나 변화가 있어도 저장 유지되기 때문
+    // - 회원정보목록 호출함수 실행
+        let memberList = 회원정보목록반환함수();
 
-        // (1) 현재 회원정보를 저장하기 위한 회원정보목록을 세션에서 가져오기
-        let memberList = sessionStorage.getItem('memberList');
-        //console.log(memberList); // 존재하지 않는 'key'를 호출하면 null이 반환됨
-        // (2) 회원정보목록이 존재하면 존재하지 않으면
-        if(memberList == null){
-            // 만약 가져온 세션데이터(memberList)가 null(없다면)이면
-            memberList = []; // 빈 배열을 생성하여 변수에 대입한다
-        }else{ // 가져온세선데이터(memberList)가 존재하면
-            // 문자열 ---> 객체(JSON)로 반환
-            memberList = JSON.parse(memberList);
-        }
+
         console.log(memberList);
+
 
         // 입력받은 객체를 배열에 저장
         memberList.push(member);
@@ -59,12 +50,8 @@ function 로그인함수(){
     let loginId = document.querySelector('.loginId').value;
     let loginPw = document.querySelector('.loginPw').value;
 
-    let memberList = sessionStorage.getItem('memberList');
-    if(memberList == null){
-        memberList = []; // 회원정보목록이 없으면 빈 배열 생성
-    }else{
-        memberList = JSON.parse(memberList); // 회원정보목록이 존재하면 JSON타입으로 변환
-    }
+    // - 회원정보목록 호출 함수 실행
+    let memberList = 회원정보목록반환함수();
 
     // 로그인정보가 회원정보(기록)내 존재하는지 비교
     for(let index = 0; index <= memberList.length-1; index++){
@@ -78,3 +65,25 @@ function 로그인함수(){
 
     return;
 }
+
+
+// [3] 세션에 있는 회원정보목록반환함수 반환 함수
+function 회원정보목록반환함수(){ // 매개변수x, 리턴값 : memberList;
+
+    // * 회원목록 정보를 전역변수에 선언하지 않고 세션/쿠키에 저장
+    //   이유 : JS 외부(브라우저)에 저장하면 새로고침되거나 변화가 있어도 저장 유지되기 때문
+
+    // (1) 현재 회원정보를 저장하기 위한 회원정보목록을 세션에서 가져오기
+    let memberList = sessionStorage.getItem('memberList');
+    //console.log(memberList); // 존재하지 않는 'key'를 호출하면 null이 반환됨
+    // (2) 회원정보목록이 존재하면 존재하지 않으면
+    if(memberList == null){
+        // 만약 가져온 세션데이터(memberList)가 null(없다면)이면
+        memberList = []; // 빈 배열을 생성하여 변수에 대입한다
+    }else{ // 가져온세선데이터(memberList)가 존재하면
+        // 문자열 ---> 객체(JSON)로 반환
+        memberList = JSON.parse(memberList);
+    }
+    return memberList; // 함수가 종료되면서 함수를 호출했던 것으로 반환/리턴 하는 값
+    
+} // func end
