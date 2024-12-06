@@ -110,10 +110,10 @@ let eno = 4;
                     <h3>도서수정</h3>
                     <form>
                         <h5>도서번호 :  ${클릭도서.도서번호}</h5>
-                        도서명 <input type="text" style="margin: 5px;"/> <br/>
-                        출판사 <input type="text" style="margin: 5px;"/> <br/>
-                        저자 <input type="text" style="margin: 5px; margin-left: 20px;" /> <br/>
-                        <button type="button" onclick="도서수정()" style="margin-top: 10px; margin-left : 165px;">수정</button>
+                        도서명 <input type="text" style="margin: 5px;" class="changeName"  value="${클릭도서.도서명}"/> <br/>
+                        출판사 <input type="text" style="margin: 5px;" class="changeCom" value="${클릭도서.출판사}"/> <br/>
+                        저자 <input type="text" style="margin: 5px; margin-left: 20px;" class ="changeWri" value="${클릭도서.저자}"/> <br/>
+                        <button type="button" onclick="도서수정2(${클릭도서.도서번호})" style="margin-top: 10px; margin-left : 165px;">수정</button>
                         <hr/>
                     </form>
                     `
@@ -122,12 +122,30 @@ let eno = 4;
             div.innerHTML = html;
 
             도서출력();
-            return;
         }
 
         // (2) 수정 출력
+        function 도서수정2(클릭된도서번호){
+            let changeName=document.querySelector('.changeName').value;
+            let changeCom=document.querySelector('.changeCom').value;
+            let changeWri=document.querySelector('.changeWri').value;
+        
+            let 수정도서 ={
+                도서번호 :클릭된도서번호, 
+                도서명 : changeName,
+                저자 : changeWri,
+                출판사 : changeCom,
+            }
+            for(let index =0;index<=도서목록.length-1;index++){
+                if(도서목록[index].도서번호==클릭된도서번호){
+                    도서목록[index]=수정도서;
+                    break;
+                }
+            }
+            도서출력();
+            document.querySelector('#도서수정').innerHTML = '';
 
-
+        }
         
 
 
@@ -240,23 +258,62 @@ let eno2 = 4;
         let div = document.querySelector('#재고수정')
 
         // 무엇을
-        let html = `
-                <h3>재고수정</h3>
-                <form>
-                    <h5>도서번호 : ${클릭재고.도서번호}</h5> 
-                    도서번호 : <input type="text" style="margin: 5px;"/> <br/>
-                    도서개수 : <input type="text" style="margin: 5px;"/> <br/>
-                    입고날짜 : <input type="text" style="margin: 5px;"/> <br/>
-                    <button type="button" onclick="도서수정()" style="margin-top: 10px; margin-left : 190px;">수정</button>
-                </form>
-        `
-
-        // 출력
-        div.innerHTML = html;
-
-        재고출력();
-        return;
+        let html =  `
+                    <h3>재고 수정</h3>
+                    <form>
+                    <div>
+                        <h5>도서번호 :  ${클릭재고.도서번호}</h5>
+                        도서개수 <input id="book1" style="margin: 5px;" type="text" value="${클릭재고.도서개수}" /><br/>
+                        입고날짜 <input id="book2" style="margin: 5px;" type="text" value="${클릭재고.입고날짜}" /><br/>
+                        <button onclick="재고수정2(${클릭재고.도서번호})" type="button" style="  background-color: black;
+                    color: #ffff;
+                    border: 3px solid black;
+                    margin-left : 165px;
+                    margin-top: 10px;">재고수정</button>
+                    </div>
+                        </form>`;
+            console.log(html)
+    
+            div.innerHTML = html
+            재고출력();
+        
+        
+        
+        
+            return;
     }
+    
+    function 재고수정2(클릭된재고번호){
+        let bookCount=document.querySelector('#book1').value;
+        let bookDay=document.querySelector('#book2').value;
+    
+        let 수정재고 ={
+            도서번호 : 클릭된재고번호, 
+            도서개수 : bookCount,
+            입고날짜 : bookDay
+        }
+        for(let index =0;index<=재고목록.length-1;index++){
+            if(재고목록[index].도서번호==클릭된재고번호){
+                재고목록[index]=수정재고;
+                break;
+            }
+        }
+        재고출력();
+        document.querySelector('#재고수정').innerHTML = '';
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
