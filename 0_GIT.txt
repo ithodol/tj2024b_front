@@ -42,10 +42,17 @@
             [ create repository ]
     5. 빈 리포지토리에 화면 가운데 'uploading an existing file' 클릭 
     6. 'index.html' 파일을 드래그 해서 업로드 , css/js 와 또 다른 html 포함 가능
-        -> index.html 파일은 리포지토리에 최상위 경로에 있어여한다.
+        -> index.html 파일은 리포지토리에 최상위 경로에 있어야한다.
         [ commit change ]
     6. 리포지토리 상단 메뉴에 [ settings ] 클릭 
     7. 왼쪽 사이드 메뉴에 [Pages] 클릭 
     8. [Branch] 항목에서 
         [None] ---> [main]으로 변경후 [/root] [save]클릭 
     9. 1~2분 기다리기 : 새로고침F5 -> Your site is live at https://xxxxx.github.io/xxxx
+
+
+[ 로컬저장소(내 PC), 원격저장소(git server) ]
+
+clone(복제) : 원격 저장소로부터 로컬 저장소로 가져오는 행위
+
+
