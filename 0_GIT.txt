@@ -51,8 +51,4 @@
     9. 1~2분 기다리기 : 새로고침F5 -> Your site is live at https://xxxxx.github.io/xxxx
 
 
-[ 로컬저장소(내 PC), 원격저장소(git server) ]
 
-clone(복제) : 원격 저장소로부터 로컬 저장소로 가져오는 행위
-
-  
