@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+</head>
+<body>
+    <div id="wrap">
+        <ul id="header">
+            <li> <a href="index.html">홈로고</a> </li>
+            <li> <a href="board.html">자유게시판</a> </li>
+        </ul>
+        <div id="container">
+            <h3>글쓰기페이지</h3>
+            <div>
+                <h4>게시물 쓰기</h4>
+                <form>
+                    제목 : <input class="title" type="text"/> <br/>
+                    내용 : <textarea class="content" cols="22" rows="5"></textarea><br/>
+                    비밀번호 : <input class="password" type="password"/> <br/>
+                    <button onclick="등록함수()" type="button">등록</button>
+                </form>
+            </div>
+        </div>
+        <div id="footer">
+
+        </div>
+    </div>
+    <script src="./js/data.js"></script> <!-- data.js를 먼저 호출해야함 -->
+    <script src="./js/write.js"></script>
+</body>
+</html>
